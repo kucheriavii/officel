@@ -535,7 +535,6 @@ header.header{
   }
 
 }
-
 .header-user__info-new{
   width: 323px;
   padding-right: 21px;
@@ -618,9 +617,132 @@ header.header{
 
 }
 .footer{
-	margin-top: -694px;
-	height: 694px;
+  margin-top: -694px;
+  min-height: 694px;
+  position: relative;
+  padding-bottom: 48px;
 }
+.follow{
+  padding-right: 47px;
+  &__header{
+	display: flex;
+	font-size: 24px;
+	color: #225a90;
+	align-items: baseline;
+	margin-top: 40px;
+	&--mail{
+	  &:before{
+		margin-right: 15px;
+		content: "";
+		display: block;
+		background-image: url("../img/icons/mail.png");
+		width: 51px;
+		height: 40px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+	  }
+	}
+	&--blog{
+	  &:before{
+		margin-right: 15px;
+		content: "";
+		display: inline-block;
+		background-image: url("../img/icons/blog.png");
+		width: 50px;
+		height: 40px;
+		background-size: contain;
+		background-repeat: no-repeat;
+		background-position: bottom;
+	  }
+	}
+	&--fb{
+	  &:before{
+		margin-right: 15px;
+		content: "";
+		display: inline-block;
+		background-image: url("../img/icons/fb.png");
+		width: 21px;
+		height: 40px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	  }
+	}
+  }
+
+  &__text{
+	margin-top: 24px;
+  }
+  .follow__input{
+	width: 100%;
+	margin: 0;
+	padding-left: 8px;
+	height: 41px;
+  }
+  &__panel{
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 33px;
+  }
+  .follow__mail-subscribe{
+	width: 134px;
+	min-width: 134px;
+	background-color: $accent;
+  }
+}
+.menu-footer__wrap{
+  display: flex;
+  margin-top: 61px;
+  .menu-footer__head{
+	font-size: 24px;
+	color: #225a90;
+	margin-bottom: 24px;
+	font-weight: normal;
+  }
+  .menu-footer__list{
+	@extend .menu-ex;
+  }
+  .menu-footer__link{
+	font-size: 14px;
+	color: #3f4345;
+  }
+  .menu-footer__col{
+	margin-left: 150px;
+	&:first-child{
+	  margin-left: 0px;
+	}
+  }
+}
+.footer-copyright{
+  background-color: $accent;
+  height: 48px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  .copyright{
+	list-style-type: none;
+	display: flex;
+	padding: 0;
+	margin: 0;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+  }
+  .copyright__link{
+	font-size: 14px;
+	color: #fff;
+	&:after{
+	  content: "|";
+	  margin-left: 5px;
+	  margin-right: 5px;
+	}
+  }
+  .copyright__item:last-child .copyright__link:after{
+	display: none;}
+}
+
+
+
 .empty{
 	height: 694px;
 }
@@ -656,6 +778,12 @@ header.header{
 		outline: none;
 	}
 }
+
+.input-text{
+  border: solid 1px #e8ecef;
+  height: 40px;
+}
+
 .menu-ex{
 	list-style-type: none;
 	margin: 0;
