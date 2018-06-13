@@ -1,6 +1,7 @@
 @import "vars";
 @import "fonts";
 @import "libs";
+@import "../img/sprites/sprite";
 
 ::placeholder {
 	color: #666;
@@ -10,15 +11,20 @@
 	background-color: $accent;
 	color: #fff;
 }
-
+html, body{
+	min-height: 100%;
+	height: 100%;
+}
 body {
 	font-size: 16px;
 	min-width: 320px;
 	position: relative;
+	min-height: 100%;
 	line-height: 1.65;
 	font-family: $default-font;
 	overflow-x: hidden;
 	color: $text;
+	background-color: #f1f3f5;
 	input, textarea {
 		border: #666 1px solid;
 		outline: none;
@@ -48,6 +54,241 @@ b, strong {
 	font-weight: bold;
 }
 
+/*user styles*/
 
+header.header{
+	background-color: $accent;
+}
+.header-top{
+	padding-top: 23px;
+	padding-bottom: 25px;
+	align-items: center;
+	.phone-link{
+		padding-right: 21px;
+	}
+}
+.search{
+	display: flex;
+	&__input{
+		display: block;
+		width: 460px;
+		border: none;
+		height: 41px;
+		padding-left: 22px;
+		&::placeholder{
+			color: #858f92;
+		}
+	}
+}
+.phone-link{
+	height: 41px;
+	display: inline-flex;
+	color: #fff;
+	padding-right: 21px;
+	align-items: center;
+	&:hover, &:active, &:focus{
+		color: #fff;
+		text-decoration: none;
+	}
+	&:before{
+		content: "";
+		display: block;
+		@include sprite($phone);
+		margin-right: 29px;
+		margin-left: 16px;
+	}
+}
+.icons-wrapper--header{
+	display: flex;
+	justify-content: space-around;
+	height: 41px;
+	font-size: 14px;
+	.personal-link{
+		color: #fff;
+		&:before{
+			content: "";
+			display: block;
+			@include sprite($user);
+			margin: 0 auto;
+			background-repeat: no-repeat;
+		}
+		&:active, &:hover, &:focus{
+			color: #fff;
+			text-decoration: underline;
+		}
+	}
+	.basket-link{
+		position: relative;
+		color: #fff;
+		&:before{
+			content: "";
+			display: block;
+			@include sprite($cart);
+			margin: 0 auto;
+		}
+		&:active, &:hover, &:focus{
+			color: #fff;
+			text-decoration: underline;
+		}
+		.item-counter{
+			position: absolute;
+			right: 0;
+			top: 0;
+			background-color: $red;
+			border-radius: 50%;
+			width: 16px;
+			height: 16px;
+			font-size: 10px;
+			text-align: center;
+			color: #fff;
+		}
+	}
+}
+.contacts{
+	margin-left: 60px;
+}
+.burger{
+	display: none;
+}
+.header-menu{
+	display: block;
+	width: 100%;
+}
+.main-menu{
+	@extend .menu-ex;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: 100%;
+	position: relative;
+	&__item{
+		text-align: center;
+		height: 100%;
+		&:last-child a:hover,
+		&:last-child a:active,
+		&:last-child a:focus{
+			margin-top: 1px;
+			top: 1px;
+			padding-bottom: 1px;
+			background-image: url("../img/sale.png");
+			background-size: contain;
+			background-position: 100% 0;
+			background-repeat: no-repeat;
+			background-color: $red;
+		}
+	}
+	&__link{
+		display: block;
+		padding-bottom: 16px;
+		color: #ffffff;
+		&:active, &:hover, &:focus{
+			color: #eee;
+			text-decoration: none;
+			background-image: linear-gradient(to top, rgba(242, 241, 244, 0.4), #235a90);
+			height: 100%;
+			overflow: hidden;
+		}
+	}
+	.main-submenu {
+		position: absolute;
+		height: 366px;
+		left: 0;
+		right: 0;
+		width: 100%;
+		background-color: #fff;
+		text-align: left;
+		padding: 53px 21px 28px 36px;
+		display: none;
+		justify-content: space-between;
+		overflow: auto;
+		&__list{
+			@extend .menu-ex;
+			display: inline-flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			height: 100%;
+			width: auto;
+		}
+		&__item{
+			margin-right: 20px;
+		}
+		&__link{
+			&:hover{
+				color: $green;
+			}
+		}
+
+		.main-submenu__window{
+			height: 100%;
+			width: 245px;
+			min-width: 245px;
+			overflow: hidden;
+			margin-top: -15px;
+			&-img{
+				width: 245px;
+				min-width: 245px;
+				height: 256px;
+				object-fit: cover;
+				display: block;
+			}
+			&-text{
+				font-size: 21px;
+				text-align: left;
+				color: $green;
+				line-height: 1.25;
+			}
+		}
+	}
+}
+.main-menu__item:hover > .main-submenu{
+	display: flex;
+}
+
+
+
+.wrapper{
+	min-height: 100%;
+	background-color: #f00;
+	padding-bottom: 694px;
+
+}
+.footer{
+	margin-top: -694px;
+	height: 694px;
+	background-color: #f0f;
+}
+.empty{
+	height: 694px;
+}
+/*extends*/
+.button{
+	background-color: $green;
+	border: none;
+	padding: 0;
+	margin: 0;
+	height: 41px;
+	line-height: 41px;
+	min-width: 41px;
+}
+
+.button-search{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&:after{
+		content: "";
+		display: block;
+		@include sprite($search);
+	}
+	&:focus, &:active{
+		outline: none;
+	}
+}
+.menu-ex{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
 
 @import "media"; // Always at the end
