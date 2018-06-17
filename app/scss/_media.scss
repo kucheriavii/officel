@@ -118,6 +118,29 @@
       margin-left: 40px;
     }
   }
+  .header-item{
+    display: block;
+    height: auto;
+    padding-left: 0;
+  }
+  .header-item__slider-wrap {
+    width: auto;
+    min-width: auto;
+    position: relative;
+    padding-bottom: 61px;
+    padding-top: 0px;
+    padding-left: 0px;
+    /* height: 400px; */
+    max-width: 500px;
+    margin: 0 auto;
+  }
+
+  .header-item__slider-slide {
+    height: 61px;
+    max-width: 61px;
+    padding-right: 3px;
+    border: 1px solid #d7dee3;
+  }
 
 /************sandwich styles*********/
   .container{
@@ -178,6 +201,10 @@
     opacity: 0;
     top: 0;
     transform: rotate(180deg);
+  }
+  .breadcrumbs{
+    padding-left: 21px;
+    padding-right: 21px;
   }
   /*main header*/
   .header-user{
@@ -353,6 +380,7 @@
   }
   .header-user__info{
     display: block;
+    padding-right: 26px;
     .header-user__info-wrap{
       width: 100%;
     }
@@ -360,12 +388,33 @@
       width: 100%;
     }
   }
+  .header-item__info-panel .header-item__info-price{
+    font-size: 18px;
+  }
+  .header-item__slider{
+    overflow: hidden;
+    height: 62px;
+  }
   .header-user .header-user__head-text {
     margin-top: 25px;
     font-size: 50px;
     padding-left: 10px;
     line-height: 50px;
     color: #235a90;
+  }
+  .breadcrumbs{
+    li{
+      display: none;
+    }
+    li:first-child{
+      display: block;
+    }
+    li:last-child{
+      display: block;
+    }
+  }
+  .header-item__slider .slick-prev{
+    display: none;
   }
   //****************************************************************************************end of header 768px
   .articles-wrap{
@@ -552,6 +601,31 @@
   .footer-copyright{
     height: auto;
   }
+  .header-item__info-panel{
+    flex-wrap: wrap;
+    height: auto;
+    padding-left: 0;
+    border-bottom: none;
+  }
+  .counter {
+    height: 80px;
+    border: none;
+  }
+  .header-item__info-panel .header-item__add{
+    height: 80px;
+  }
+  .header-item__info{
+    padding-right: 5px;
+    padding-left: 5px;
+  }
+  .header-item__info-panel{
+    position: static;
+  }
+  .header-item__info-panel .header-item__info-price {
+    height: 80px;
+    line-height: 80px;
+  }
+
 }
 
 
