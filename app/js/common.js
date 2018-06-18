@@ -6,7 +6,7 @@ $(function() {
     scrollToTop(); //вешаем кнопку прокрутки вверх
     itemCounter(); //счетчик
     itemSlider(); //выбор картинки товара в хедере item.html
-
+    filter(); //фильтер с вспомагательными функциями
 
 
 
@@ -66,8 +66,11 @@ var hovers = function(){
 
 var setActive = function(){
     //variables
+
     var addCartBtn = '.button-item-add';
-    var mainMenuItem = '.main-menu__item'
+    var mainMenuItem = '.main-menu__item';
+    var filterHeader = '.filter .filter__header'; //при нажатии на название групп в фильре сворачывать доппараметры
+    var subfilterHeader = '.filter__block .filter__category-name';
 
     //events
 
@@ -90,6 +93,35 @@ var setActive = function(){
             $(mainMenuItem).removeClass('active');
         }
     });
+
+    //гармошки фильтра
+    $(document).on('click', filterHeader, function(e){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            if(!$(this).hasClass('active')){
+                $(this).parents('.filter__section').find('.filter__block').slideUp(300);
+            }
+        } else {
+            $(this).addClass('active');
+            if($(this).hasClass('active')){
+                $(this).parents('.filter__section').find('.filter__block').slideDown(300);
+            }
+        }
+    });
+    //гармошки подкатегорий фильтра
+    $(document).on('click', subfilterHeader, function(e){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            if(!$(this).hasClass('active')){
+                $(this).next('.filter__list').slideUp(300);
+            }
+        } else {
+            $(this).addClass('active');
+            if($(this).hasClass('active')){
+                $(this).next('.filter__list').slideDown(300);
+            }
+        }
+    })
 
 
 
@@ -166,6 +198,24 @@ var itemSlider = function(){
 
 };
 
+var filter = function(){
+  //пробегаем по фильтре и смотрим какие хедеры активные
+  //отображаем нужные фильтры
+  var filterHeader = ".filter__header" ;
+  for (var i = 0; i<filterHeader.length; i++){
+      if($(filterHeader).eq(i).hasClass('active')){
+          $(filterHeader).eq(i).parents('.filter__section').find('.filter__block').css('display','block');
+      }
+  }
+  //пробегаем по подфильтре и смотрим какие хедеры активные
+  //отображаем нужные фильтры
+  var subfilterHeader = ".filter__category-name" ;
+  for (var i = 0; i<filterHeader.length; i++){
+      if($(subfilterHeader).eq(i).hasClass('active')){
+          $(subfilterHeader).eq(i).next('.filter__list').css('display','block');
+      }
+  }
+};
 
 //user functions
 var userMethods = {

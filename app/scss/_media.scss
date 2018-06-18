@@ -310,6 +310,9 @@
     padding-left: 17px;
     padding-right: 17px;
   }
+  .articles, .items, .offers, .your-shoppings, .recomends-item{
+    margin-bottom: 20px;
+  }
 
 }
 
@@ -380,7 +383,6 @@
   }
   .header-user__info{
     display: block;
-    padding-right: 26px;
     .header-user__info-wrap{
       width: 100%;
     }
@@ -468,10 +470,20 @@
     margin-right: 0;
     margin-bottom: 25px;
   }
+  .articles{
+    margin-bottom: 20px;
+    padding-bottom: 0;
+  }
+  .articles-header{
+    font-size: 24px;
+    text-align: center;
+  }
   .article__picture-wrap{
     max-width: 100%;
   }
-
+  .offers{
+    overflow: hidden;
+  }
 
 
   .footer{
