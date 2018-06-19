@@ -4613,9 +4613,74 @@ header.header {
           flex-wrap: wrap;
 }
 
+.items-catalog .panel-nav {
+  margin-right: 20px;
+}
+
+.items-catalog .pagination li {
+  margin-right: 5px;
+}
+
+.items-catalog .pagination li a {
+  color: #858f92;
+  font-size: 14px;
+  display: block;
+  letter-spacing: 0.1px;
+}
+
+.items-catalog .pagination li.active a {
+  color: #a7c363;
+  text-decoration: underline;
+}
+
 .items-catalog .item {
+  margin: 20px;
+}
+
+.items-catalog .item a:hover {
+  text-decoration: none;
+}
+
+.items-catalog .pagenav {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border-bottom: 1px solid #a7c363;
   margin-left: 20px;
   margin-right: 20px;
+  width: auto;
+  margin-bottom: 120px;
+  max-height: 40px;
+}
+
+.items-catalog .pagenav__wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.items-catalog .pagination {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 }
 
 .wrapper {
@@ -5200,6 +5265,42 @@ header.header {
 .counter .counter-minus {
   bottom: 6px;
   background-image: url("../img/icons/arrow-down.png");
+}
+
+.panel-nav {
+  right: 0;
+  bottom: 17px;
+  width: 70px;
+  height: 30px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.panel-nav button {
+  background-color: #f3f5f7;
+  display: block;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-repeat: no-repeat;
+}
+
+.panel-nav button:focus {
+  outline: 0;
+}
+
+.panel-nav .next-slide {
+  background-image: url("../img/icons/arrow-right-green-trans.png");
+}
+
+.panel-nav .prev-slide {
+  background-image: url("../img/icons/arrow-left-green-trans.png");
 }
 
 /***Custom vars***/
