@@ -7,7 +7,7 @@ $(function() {
     itemCounter(); //счетчик
     itemSlider(); //выбор картинки товара в хедере item.html
     filter(); //фильтер с вспомагательными функциями
-
+    itemView(); //переключение вида items на странице categories
 
 
 
@@ -217,6 +217,16 @@ var filter = function(){
   }
 };
 
+var itemView = function(){
+    var lineView = '.show-line';
+    var squareView = '.show-square';
+    $(lineView).on('click', function(){
+        $('.items-catalog__wrap').addClass('line-view');
+    });
+    $(squareView).on('click', function(){
+        $('.items-catalog__wrap').removeClass('line-view');
+    });
+};
 //user functions
 var userMethods = {
     isMobile: function(){
