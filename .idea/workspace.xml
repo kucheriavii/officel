@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="203caeb9-13b6-4405-928d-f890c3491fac" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/categories.html" afterPath="$PROJECT_DIR$/app/categories.html" />
-      <change beforePath="$PROJECT_DIR$/app/css/main.min.css" afterPath="$PROJECT_DIR$/app/css/main.min.css" />
-      <change beforePath="$PROJECT_DIR$/app/js/common.js" afterPath="$PROJECT_DIR$/app/js/common.js" />
-      <change beforePath="$PROJECT_DIR$/app/js/scripts.min.js" afterPath="$PROJECT_DIR$/app/js/scripts.min.js" />
-      <change beforePath="$PROJECT_DIR$/app/scss/_media.scss" afterPath="$PROJECT_DIR$/app/scss/_media.scss" />
-      <change beforePath="$PROJECT_DIR$/app/scss/main.scss" afterPath="$PROJECT_DIR$/app/scss/main.scss" />
+      <change beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -33,7 +26,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_media.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="_media.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/scss/_media.scss">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="298">
@@ -45,17 +38,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.min.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/css/main.min.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-              <folding>
-                <marker date="1529494954437" expanded="true" signature="104458:104482" ph="{...}" />
-                <marker date="1529494954437" expanded="true" signature="107919:107967" ph="{...}" />
-                <marker date="1529494954437" expanded="true" signature="126367:126504" ph="{...}" />
-                <marker date="1529494954437" expanded="true" signature="134538:134543" ph="{...}" />
-              </folding>
+      <file leaf-file-name="readme.md" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="21">
+                <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+                <folding />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -258,7 +249,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>subscri</find>
       <find>:ch</find>
       <find>empty</find>
       <find>button-item-add</find>
@@ -288,6 +278,7 @@
       <find>breadcrumb</find>
       <find>scroll-to-top</find>
       <find>--gr</find>
+      <find>advertising</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -315,6 +306,7 @@
         <option value="$PROJECT_DIR$/app/categories.html" />
         <option value="$PROJECT_DIR$/app/js/common.js" />
         <option value="$PROJECT_DIR$/app/scss/_media.scss" />
+        <option value="$PROJECT_DIR$/readme.md" />
       </list>
     </option>
   </component>
@@ -411,12 +403,12 @@
       <workItem from="1529217913469" duration="30850000" />
       <workItem from="1529304138204" duration="16031000" />
       <workItem from="1529389045756" duration="9321000" />
-      <workItem from="1529476120470" duration="15117000" />
+      <workItem from="1529476120470" duration="15798000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219433000" />
+    <option name="totallyTimeSpent" value="220114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -454,70 +446,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/scss/main.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="13020">
-          <caret line="620" column="17" lean-forward="false" selection-start-line="620" selection-start-column="15" selection-end-line="620" selection-end-column="17" />
-          <folding>
-            <element signature="e#979#1141#0" expanded="false" />
-            <element signature="e#1153#1465#0" expanded="false" />
-            <element signature="e#4398#5044#0" expanded="false" />
-            <element signature="e#5057#5696#0" expanded="false" />
-            <element signature="e#5888#6156#0" expanded="false" />
-            <element signature="e#6168#6319#0" expanded="false" />
-            <element signature="e#6329#6372#0" expanded="false" />
-            <element signature="e#6398#6560#0" expanded="false" />
-            <element signature="e#6581#6800#0" expanded="false" />
-            <element signature="e#6821#7045#0" expanded="false" />
-            <element signature="e#7055#7131#0" expanded="false" />
-            <element signature="e#7146#7249#0" expanded="false" />
-            <element signature="e#7261#7337#0" expanded="false" />
-            <element signature="e#7355#7391#0" expanded="false" />
-            <element signature="e#7407#7678#0" expanded="false" />
-            <element signature="e#7693#7791#0" expanded="false" />
-            <element signature="e#7808#7873#0" expanded="false" />
-            <element signature="e#7904#8086#0" expanded="false" />
-            <element signature="e#8119#8178#0" expanded="false" />
-            <element signature="e#8192#8268#0" expanded="false" />
-            <element signature="e#8286#8304#0" expanded="false" />
-            <element signature="e#8323#8489#0" expanded="false" />
-            <element signature="e#8514#8605#0" expanded="false" />
-            <element signature="e#8628#8704#0" expanded="false" />
-            <element signature="e#8721#8869#0" expanded="false" />
-            <element signature="e#8884#8920#0" expanded="false" />
-            <element signature="e#8938#9197#0" expanded="false" />
-            <element signature="e#9223#9459#0" expanded="false" />
-            <element signature="e#9488#9687#0" expanded="false" />
-            <element signature="e#9717#9922#0" expanded="false" />
-            <element signature="e#9944#10031#0" expanded="false" />
-            <element signature="e#10059#10219#0" expanded="false" />
-            <element signature="e#10245#11586#0" expanded="false" />
-            <element signature="e#10328#10383#0" expanded="false" />
-            <element signature="e#10417#10655#0" expanded="false" />
-            <element signature="e#10670#11350#0" expanded="false" />
-            <element signature="e#11398#11419#0" expanded="false" />
-            <element signature="e#11445#11467#0" expanded="false" />
-            <element signature="e#11502#11526#0" expanded="false" />
-            <element signature="e#11560#11584#0" expanded="false" />
-            <element signature="e#11740#16196#0" expanded="false" />
-            <element signature="e#12050#12185#0" expanded="false" />
-            <element signature="e#13710#15579#0" expanded="false" />
-            <element signature="e#16329#16403#0" expanded="false" />
-            <element signature="e#16418#16492#0" expanded="false" />
-            <element signature="e#16501#17265#0" expanded="false" />
-            <element signature="e#17384#18194#0" expanded="false" />
-            <element signature="e#18227#18419#0" expanded="false" />
-            <element signature="e#18521#20400#0" expanded="false" />
-            <element signature="e#20602#22369#0" expanded="false" />
-            <element signature="e#24810#24902#0" expanded="false" />
-            <element signature="e#24910#26077#0" expanded="false" />
-            <element signature="e#26096#26566#0" expanded="false" />
-            <element signature="e#27758#27779#0" expanded="false" />
-            <element signature="e#27791#27839#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/scss/_vars.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -923,10 +851,10 @@
         <state relative-caret-position="252">
           <caret line="12" column="21" lean-forward="false" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
           <folding>
-            <marker date="1529494954437" expanded="true" signature="104458:104482" ph="{...}" />
-            <marker date="1529494954437" expanded="true" signature="107919:107967" ph="{...}" />
-            <marker date="1529494954437" expanded="true" signature="126367:126504" ph="{...}" />
-            <marker date="1529494954437" expanded="true" signature="134538:134543" ph="{...}" />
+            <marker date="1529495116421" expanded="true" signature="104458:104482" ph="{...}" />
+            <marker date="1529495116421" expanded="true" signature="107919:107967" ph="{...}" />
+            <marker date="1529495116421" expanded="true" signature="126367:126504" ph="{...}" />
+            <marker date="1529495116421" expanded="true" signature="134538:134543" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1133,6 +1061,17 @@
           <folding>
             <element signature="e#1247#1973#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="21">
+            <caret line="1" column="41" lean-forward="true" selection-start-line="1" selection-start-column="41" selection-end-line="1" selection-end-column="41" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
