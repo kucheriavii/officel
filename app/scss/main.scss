@@ -1878,4 +1878,9 @@ header.header{
 	background-image: url("../img/icons/arrow-left-green-trans.png");
   }
 }
+.temp-popup{
+  display: none;
+  height: 100%;
+  width: 100%;
+}
 @import "media"; // Always at the end

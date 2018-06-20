@@ -5416,6 +5416,12 @@ header.header {
   background-image: url("../img/icons/arrow-left-green-trans.png");
 }
 
+.temp-popup {
+  display: none;
+  height: 100%;
+  width: 100%;
+}
+
 /***Custom vars***/
 /*==========  Desktop First  ==========*/
 @media (max-width: 1199.98px) {

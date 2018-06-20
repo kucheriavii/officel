@@ -10,8 +10,24 @@ $(function() {
     itemView(); //переключение вида items на странице categories
 
 
+    var items = $('.header-item__slider-slide img').clone();
 
 
+    $('.header-item__main-pic img').remove();
+
+    items.appendTo('.header-item__main-pic');
+
+    $('.header-item__main-pic img').wrap(function() {
+        return "<a href='" + $( this ).attr('src') + "' class='temp-popup'></a>";
+    });
+    $('.temp-popup').eq(0).css('display','block');
+    $('.header-item__main-pic .temp-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        // other options
+    });
 
 
 });
@@ -188,14 +204,25 @@ var itemSlider = function(){
   var img = $('.header-item__main-pic img'),
       sliderItem = '.header-item__slider-slide';
 
-    $(document).on('click', sliderItem, function(e){
+   /* $(document).on('click', sliderItem, function(e){
         var src = $(this).find('img').attr('src');
         img.attr('src', src);
         $(sliderItem).removeClass('bordered');
         console.log($(this));
         $(this).addClass('bordered');
-    });
+    });*/
+    $(document).on('click', sliderItem, function(e){
+        var src = $(this).find('img').attr('src');
+        var sliderTarget = $(this).index('.header-item__slider-slide');
+        console.log(sliderTarget);
+        $('.temp-popup').removeAttr('style');
+        $('.temp-popup').eq(sliderTarget).css('display','block')
 
+        img.attr('src', src);
+        $(sliderItem).removeClass('bordered');
+        console.log($(this));
+        $(this).addClass('bordered');
+    });
 };
 
 var filter = function(){
@@ -231,11 +258,11 @@ var itemView = function(){
 var userMethods = {
     isMobile: function(){
         if ($(window).width()<1024){
-            console.log($(window).width())
+           // console.log($(window).width())
             return true;
         } else {
             return false;
-            console.log($(window).width())
+            //console.log($(window).width())
         }
     },
     itemsSlider: function(item){ //для стандартного слайдера на сайт
