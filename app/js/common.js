@@ -10,24 +10,7 @@ $(function() {
     itemView(); //переключение вида items на странице categories
 
 
-    var items = $('.header-item__slider-slide img').clone();
 
-
-    $('.header-item__main-pic img').remove();
-
-    items.appendTo('.header-item__main-pic');
-
-    $('.header-item__main-pic img').wrap(function() {
-        return "<a href='" + $( this ).attr('src') + "' class='temp-popup'></a>";
-    });
-    $('.temp-popup').eq(0).css('display','block');
-    $('.header-item__main-pic .temp-popup').magnificPopup({
-        type: 'image',
-        gallery: {
-            enabled: true
-        },
-        // other options
-    });
 
 
 });
@@ -211,6 +194,28 @@ var itemSlider = function(){
         console.log($(this));
         $(this).addClass('bordered');
     });*/
+
+    var items = $('.header-item__slider-slide img').clone();
+
+    /*собираем все картинки со слайдера item.html и клонируем их в бокс для отображения большой картинки*/
+    $('.header-item__main-pic img').remove();
+    items.appendTo('.header-item__main-pic');
+    $('.header-item__main-pic img').wrap(function() {
+        return "<a href='" + $( this ).data('original-src') + "' class='temp-popup'></a>";
+    });
+    $('.temp-popup').eq(0).css('display','block');
+    $('.header-item__main-pic .temp-popup').magnificPopup({
+        type: 'image',
+        gallery: {
+            enabled: true
+        },
+        // other options
+    });
+
+
+
+
+
     $(document).on('click', sliderItem, function(e){
         var src = $(this).find('img').attr('src');
         var sliderTarget = $(this).index('.header-item__slider-slide');
