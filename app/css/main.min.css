@@ -5978,6 +5978,7 @@ header.header {
   }
   .menubar {
     width: 100%;
+    margin-top: 21px;
   }
   .menubar .menubar__section-name {
     -webkit-box-pack: start;
@@ -6007,6 +6008,9 @@ header.header {
   .categories__wrap .categories__main-article {
     margin-left: 14px;
     margin-right: 14px;
+  }
+  .wrapper .items-catalog--category .pagenav {
+    margin-bottom: 80px;
   }
   .footer {
     padding-left: 0px;
