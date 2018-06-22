@@ -4805,6 +4805,13 @@ header.header {
 .wrapper .items-catalog--category .pagenav {
   margin: 0;
   margin-bottom: 156px;
+  margin-right: 21px;
+  margin-left: 21px;
+}
+
+.wrapper .items-catalog--category .items-catalog__wrap {
+  margin-right: 0px;
+  padding-bottom: 50px;
 }
 
 .items-catalog {
@@ -4868,7 +4875,7 @@ header.header {
 }
 
 .items-catalog .item {
-  margin: 20px;
+  margin: 20px 18px;
 }
 
 .items-catalog .item a:hover {
@@ -5684,6 +5691,14 @@ header.header {
         -ms-transform: translateX(-100%);
             transform: translateX(-100%);
   }
+  .wrapper .items-catalog--category {
+    margin-right: 0;
+    margin-left: 0;
+  }
+  .wrapper .items-catalog--category .pagenav {
+    margin-right: 21px;
+    margin-left: 21px;
+  }
 }
 
 @media (max-width: 1023.98px) {
@@ -5955,6 +5970,43 @@ header.header {
   .articles-header-wrap {
     margin-left: 17px;
     margin-right: 17px;
+  }
+  .catalog-wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .menubar {
+    width: 100%;
+  }
+  .menubar .menubar__section-name {
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    width: auto;
+  }
+  .menubar .menubar__section-name:after {
+    margin-left: 15px;
+  }
+  .menubar__menu .menubar__categories-name {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: auto;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .menubar__menu .menubar__categories-name:after {
+    margin-left: 15px;
+    background-repeat: no-repeat;
+  }
+  .categories__wrap .categories__main-article {
+    margin-left: 14px;
+    margin-right: 14px;
   }
   .footer {
     padding-left: 0px;
@@ -6248,6 +6300,9 @@ header.header {
   .offers {
     overflow: hidden;
   }
+  .categories__menu-item {
+    width: 50%;
+  }
   .catalog-wrap .items-catalog .slick-panel {
     display: block;
   }
@@ -6359,6 +6414,9 @@ header.header {
   .follow {
     padding-left: 17px;
   }
+  .footer-copyright {
+    height: auto;
+  }
 }
 
 @media (max-width: 419.98px) {
@@ -6404,6 +6462,9 @@ header.header {
   .pagenav .pagenav__load-more {
     width: 100%;
     min-height: 50px;
+  }
+  .categories__menu-item {
+    width: 100%;
   }
   .menu-footer__wrap {
     display: block;

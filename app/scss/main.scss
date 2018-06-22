@@ -1419,6 +1419,12 @@ header.header{
   .pagenav{
 	margin: 0;
 	margin-bottom: 156px;
+	margin-right: 21px;
+	margin-left: 21px;
+  }
+  .items-catalog__wrap{
+	margin-right: 0px;
+	padding-bottom: 50px;
   }
 }
 
@@ -1465,7 +1471,7 @@ header.header{
 	}
   }
   .item{
-	margin: 20px;
+	margin: 20px 18px;
 	a:hover{
 	  text-decoration: none;
 	}
