@@ -411,9 +411,11 @@
     }
   }
   .line-view .item .button-item-add{
-    left: 380px;
+   // left: 380px;
   }
-
+  .items-catalog--category .articles-header{
+	margin-left: 21px;
+  }
 }
 
 // ≥768px
@@ -626,6 +628,9 @@
       }
     }
   }
+  .items-catalog__wrap.line-view .item .button-item-add{
+	left: 100%;
+  }
 
 
   .footer{
@@ -638,6 +643,10 @@
   .articles-wrap{
     flex-wrap: wrap;
   }
+  .articles-header{
+	width: 100%;
+	text-align: left;
+  }
   .articles{
     padding-right: 5px;
     padding-left: 5px;
@@ -645,8 +654,12 @@
       margin-right: 0px;
     }
   }
+  .items-catalog .articles-header-wrap{
+	flex-wrap: wrap;
+  }
   .articles-header-wrap .slick-panel{
-    display: none;
+	position: static;
+	width: 100%;
   }
   .header-border--green{
     display: none;
