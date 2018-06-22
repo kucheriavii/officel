@@ -288,6 +288,10 @@
   .menubar{
 	width: 100%;
 	margin-top: 21px;
+	display: none;
+	&.active{
+	  display: block;
+	}
   }
   .menubar .menubar__section-name{
 	justify-content: flex-start;
@@ -363,9 +367,13 @@
   .catalog-wrap{
     flex-wrap: wrap;
     .filter{
+	  display: none;
       width: 100%;
       padding-right: 21px;
       padding-left: 21px;
+	  &.active{
+		display: block;
+	  }
       .advertising{
         display: flex;
         margin-top: 20px;
@@ -418,7 +426,28 @@
    // left: 380px;
   }
   .items-catalog--category .articles-header{
-	margin-left: 21px;
+	padding-left: 21px;
+  }
+  .mobile-filter-button{
+	display: block;
+	background-color: transparent;
+	border: none;
+	background-image: url('../img/filter2.png');
+	width: 50px;
+	height: 50px;
+	padding: 5px;
+	border: 1px solid $accent;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin: 18px;
+	&:focus, &:active{
+	  outline: 0;
+	}
+	&.active{
+	  background-color: $accent;
+	  background-image: url('../img/filter.png');
+	}
   }
 }
 

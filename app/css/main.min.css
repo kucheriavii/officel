@@ -5642,6 +5642,10 @@ header.header {
   width: 100%;
 }
 
+.mobile-filter-button {
+  display: none;
+}
+
 /***Custom vars***/
 /*==========  Desktop First  ==========*/
 @media (max-width: 1199.98px) {
@@ -5979,6 +5983,10 @@ header.header {
   .menubar {
     width: 100%;
     margin-top: 21px;
+    display: none;
+  }
+  .menubar.active {
+    display: block;
   }
   .menubar .menubar__section-name {
     -webkit-box-pack: start;
@@ -6067,9 +6075,13 @@ header.header {
             flex-wrap: wrap;
   }
   .catalog-wrap .filter {
+    display: none;
     width: 100%;
     padding-right: 21px;
     padding-left: 21px;
+  }
+  .catalog-wrap .filter.active {
+    display: block;
   }
   .catalog-wrap .filter .advertising {
     display: -webkit-box;
@@ -6125,7 +6137,29 @@ header.header {
     text-align: left;
   }
   .items-catalog--category .articles-header {
-    margin-left: 21px;
+    padding-left: 21px;
+  }
+  .mobile-filter-button {
+    display: block;
+    background-color: transparent;
+    border: none;
+    background-image: url("../img/filter2.png");
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #235a90;
+    -webkit-background-size: 32px 32px;
+            background-size: 32px 32px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 18px;
+  }
+  .mobile-filter-button:focus, .mobile-filter-button:active {
+    outline: 0;
+  }
+  .mobile-filter-button.active {
+    background-color: #235a90;
+    background-image: url("../img/filter.png");
   }
 }
 
