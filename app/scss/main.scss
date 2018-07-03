@@ -359,6 +359,10 @@ header.header{
 		padding: 12px 42px;
 		display: flex;
 		line-height: 21px;
+		&:hover, &:active{
+		  color: #fff;
+		  text-decoration: none;
+		}
 	  }
   }
   &__slider{
@@ -372,6 +376,9 @@ header.header{
 	  width: 100%;
 	  height: 535px;
 	}
+  }
+  .slider__item{
+	position: relative;
   }
   &__info{
 	  width: 323px;
@@ -528,6 +535,9 @@ header.header{
 	  color: #fff;
 	  padding: 0 21px;
 	  align-items: center;
+	  &:hover{
+		text-decoration: none;
+	  }
 	}
   }
   &__autorisation-profile{
@@ -554,6 +564,11 @@ header.header{
 	  text-align: center;
 	  margin-top: 22px;
 	  margin-bottom: 29px;
+	  display: block;
+	  &:hover, &:active{
+		color: #fff;
+		text-decoration: none;
+	  }
 	}
   }
   &__order-text, &__join-text{
@@ -917,6 +932,11 @@ header.header{
   display: flex;
   margin-top: 34px;
   justify-content: space-between;
+  .slick-slide>div{
+	//background-color: #f00;
+	display: flex;
+	justify-content: center;
+  }
 }
 .article{
   border: solid 1px #e8ecef;
@@ -1471,7 +1491,8 @@ header.header{
 	}
   }
   .item{
-	margin: 20px 18px;
+	//margin: 20px 18px;
+	margin: 20px;
 	a:hover{
 	  text-decoration: none;
 	}
@@ -1854,6 +1875,8 @@ header.header{
   &-wrap{
 	display: flex;
 	position: relative;
+	max-width: 1170px;
+	margin: 0 auto;
 	.slick-panel{
 	  position: absolute;
 	  right: 0;

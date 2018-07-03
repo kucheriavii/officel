@@ -3302,6 +3302,11 @@ header.header {
   line-height: 21px;
 }
 
+.header-user__picture .button-details:hover, .header-user__picture .button-details:active {
+  color: #fff;
+  text-decoration: none;
+}
+
 .header-user__slider {
   width: 100%;
   height: 100%;
@@ -3315,6 +3320,10 @@ header.header {
   height: 100%;
   width: 100%;
   height: 535px;
+}
+
+.header-user .slider__item {
+  position: relative;
 }
 
 .header-user__info {
@@ -3562,6 +3571,10 @@ header.header {
           align-items: center;
 }
 
+.header-user__autorisation .header-user__autorisation-enter:hover {
+  text-decoration: none;
+}
+
 .header-user__autorisation-profile {
   display: -webkit-box;
   display: -webkit-flex;
@@ -3599,6 +3612,12 @@ header.header {
   text-align: center;
   margin-top: 22px;
   margin-bottom: 29px;
+  display: block;
+}
+
+.header-user__order-wrap .header-user__confirm:hover, .header-user__order-wrap .header-user__confirm:active, .header-user__join-wrap .header-user__confirm:hover, .header-user__join-wrap .header-user__confirm:active {
+  color: #fff;
+  text-decoration: none;
 }
 
 .header-user__order-text, .header-user__join-text {
@@ -4105,6 +4124,17 @@ header.header {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.articles-wrap .slick-slide > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .article {
@@ -4875,7 +4905,7 @@ header.header {
 }
 
 .items-catalog .item {
-  margin: 20px 18px;
+  margin: 20px;
 }
 
 .items-catalog .item a:hover {
@@ -5391,6 +5421,8 @@ header.header {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  max-width: 1170px;
+  margin: 0 auto;
 }
 
 .articles-header-wrap .slick-panel {
@@ -6421,6 +6453,7 @@ header.header {
   .articles-header-wrap .slick-panel {
     position: static;
     width: 100%;
+    max-width: 90px;
   }
   .header-border--green {
     display: none;
