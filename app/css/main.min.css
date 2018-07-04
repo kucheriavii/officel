@@ -4288,6 +4288,13 @@ header.header {
   padding-bottom: 40px;
 }
 
+.your-shoppings__link-wrap, .recomends-item__link-wrap {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .item {
   max-width: 263px;
   height: 460px;
@@ -6360,6 +6367,10 @@ header.header {
   }
   .header-user__balance {
     margin-right: 0;
+  }
+  .header-user__order-num, .header-user__join-num {
+    width: 100%;
+    margin: 0 auto;
   }
   .article {
     width: 100%;

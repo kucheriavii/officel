@@ -599,6 +599,10 @@
   .header-user__balance{
     margin-right: 0;
   }
+  .header-user__order-num, .header-user__join-num{
+    width: 100%;
+    margin: 0 auto;
+  }
 
   .article{
     width: 100%;
