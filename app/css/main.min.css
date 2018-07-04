@@ -4842,6 +4842,10 @@ header.header {
   background-color: #fff;
 }
 
+.wrapper .items-catalog--category .item {
+  margin: 20px 32px 20px 5px;
+}
+
 .wrapper .items-catalog--category .articles-header-wrap {
   margin: 0;
 }
