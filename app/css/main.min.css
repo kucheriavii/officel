@@ -3455,10 +3455,13 @@ header.header {
   color: #235a90;
   font-weight: bold;
   margin-right: 5px;
+  padding: 0px 8px;
+  display: block;
 }
 
-.header-user__detail-btn:active, .header-user__detail-btn:focus, .header-user__orders-btn:active, .header-user__orders-btn:focus {
+.header-user__detail-btn:active, .header-user__detail-btn:focus, .header-user__detail-btn:hover, .header-user__orders-btn:active, .header-user__orders-btn:focus, .header-user__orders-btn:hover {
   outline: 0;
+  text-decoration: none;
 }
 
 .header-user__detail-text, .header-user__orders-text {
@@ -3589,6 +3592,10 @@ header.header {
   font-size: 14px;
   padding-bottom: 4px;
   color: #235a90;
+}
+
+.header-user__autorisation-profile:hover {
+  text-decoration: none;
 }
 
 .header-user__autorisation-profile:before {
@@ -5239,11 +5246,14 @@ header.header {
   z-index: 9;
   padding-left: 21px;
   padding-right: 21px;
+  text-align: center;
 }
 
 .button:active, .button:hover, .button:focus {
   outline: 0;
   z-index: 9;
+  text-decoration: none;
+  color: #fff;
 }
 
 .button:active {

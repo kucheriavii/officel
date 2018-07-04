@@ -469,8 +469,11 @@ header.header{
 	color: $accent;
 	font-weight: bold;
 	margin-right: 5px;
-	&:active, &:focus{
+	padding: 0px 8px;
+	display: block;
+	&:active, &:focus, &:hover{
 	  outline: 0;
+	  text-decoration: none;
 	}
   }
   &__detail-text, &__orders-text{
@@ -548,6 +551,9 @@ header.header{
 	font-size: 14px;
 	padding-bottom: 4px;
 	color: $accent;
+	&:hover{
+	  text-decoration: none;
+	}
 	&:before{
 	  content: "";
 	  display: block;
@@ -1737,9 +1743,12 @@ header.header{
   z-index: 9;
   padding-left: 21px;
   padding-right: 21px;
+  text-align: center;
   &:active, &:hover, &:focus{
 	outline: 0;
 	z-index: 9;
+	text-decoration: none;
+	color: #fff;
   }
   &:active{
 	box-shadow: 0px 3px 7px 0 rgba(0, 0, 0, 0.16);
