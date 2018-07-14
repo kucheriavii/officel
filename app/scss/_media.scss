@@ -331,7 +331,9 @@
       }
     }
   }
-
+  .login__label-text{
+	min-width: 100px;
+  }
   .articles{
     &-wrap{
       margin-left: 17px;
@@ -819,6 +821,46 @@
   }
   .header-top .phone-link{
     font-size: 12px;
+  }
+  .sign-in-box{
+	.login__wrap{
+	  min-height: 480px;
+	  position: relative;
+	  .login__button{
+		left: 50%;
+		transform: translateX(-50%);
+		width: 80%;
+	  }
+	  .login__userdata-name input, .login__userdata-Last_name input{
+		width: 100%;
+	  }
+	}
+	.login__userdata-name, .login__userdata-Last_name{
+	  display: block;
+	}
+	.login__panel{
+	  width: auto;
+	  flex-wrap: wrap;
+	  display: block;
+	  float: none;
+	  margin: 0 auto;
+	  text-align: center;
+	}
+	.login__remember-me{
+	  justify-content: center;
+	}
+	.login__forgot-password{
+	  margin-top: 10px;
+	  display: block;
+	}
+	.sign-up__wrap{
+	  min-height: 480px;
+	}
+	.sign-up__button{
+	  left: 50%;
+	  transform: translateX(-50%);
+	  width: 80%;
+	}
   }
   .footer-copyright{
     height: auto;

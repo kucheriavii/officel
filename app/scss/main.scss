@@ -928,7 +928,107 @@ header.header{
 	}
   }
 }
-//***************************************************************hedaer
+//***************************************************************header
+
+//***************************************************************sign in box
+.sign-in-box{
+  box-shadow: -0.6px 5px 54px 0 rgba(66, 73, 79, 0.11);
+}
+.login{
+  &__wrap{
+	background: #fff;
+	height: 380px;
+	padding: 37px 39px 60px 22px;
+	position: relative;
+	#remember-me{
+	  display: none;
+	}
+	#remember-me:checked+label:before{
+	  content: "";
+	  border: none;
+	  display: inline-block;
+	  background-image: url("../img/icons/checkbox-green.png");
+	  width: 16px;
+	  height: 16px;
+	  margin-right: 14px;
+	}
+	.login__button{
+	  padding: 0 40px;
+	  margin-top: 30px;
+	  clear: right;
+	  display: block;
+	  float: right;
+	  position: absolute;
+	  bottom: 60px;
+	  right: 40px;
+	}
+  }
+  &__header{
+	font-size: 24px;
+	color: $accent;
+	font-weight: normal;
+	padding-bottom: 19px;
+  }
+  &__label-text{
+	font-size: 14px;
+	color: #3f4345;
+  }
+  &__remember-me, &__forgot-password{
+	color: #3f4345;
+	text-decoration: none;
+  }
+
+  &__remember-me{
+	display: flex;
+	align-items: center;
+	&:before{
+	  content: "";
+	  display: block;
+	  width: 16px;
+	  height: 16px;
+	  border: $green 1px solid;
+	  margin-right: 14px;
+	}
+  }
+  &__userdata-name, &__userdata-Last_name{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-bottom: 19px;
+	input{
+	  height: 40px;
+	  width: 363px;
+	  padding-left: 14px;
+	  padding-right: 14px;
+	}
+  }
+  &__panel{
+	float: right;
+	display: flex;
+	justify-content: space-between;
+	width: 364px;
+  }
+}
+.sign-up{
+  &__wrap{
+	background-color: #f0f3f5;
+	min-height: 380px;
+	padding: 37px 39px 60px 22px;
+	position: relative;
+  }
+  &__header{
+	font-size: 24px;
+	color: $accent;
+	font-weight: normal;
+	padding-bottom: 19px;
+  }
+  &__button{
+	position: absolute;
+	bottom: 60px;
+	right: 40px;
+  }
+}
+//***************************************************************/login
 .articles, .items, .offers, .your-shoppings, .recomends-item{
   padding-top: 51px;
   background-color: #fff;
@@ -1447,6 +1547,7 @@ header.header{
   }
   .articles-header-wrap{
 	margin: 0;
+	margin-right: 16px;
   }
   .pagenav{
 	margin: 0;
