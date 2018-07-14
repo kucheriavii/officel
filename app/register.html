@@ -323,36 +323,144 @@
 			</div>
 		</div>
 	</header>
-	<div class="container">
-		<div class="row">
-			<div class="account-box__wrap">
-				<h2 class="account-box__header">User Registration</h2>
-				<p class="account-box__text">Sign up and you will be able to track your order and get information about previous purchases. Also get discounts and other special conditions!</p>
-				<div class="account-box__content">
-					<h3 class="account-box__account-header">Account type</h3>
+	<div class="account-box">
+		<div class="container">
+			<div class="row">
+				<div class="account-box__wrap">
+					<h2 class="account-box__header">User Registration</h2>
+					<p class="account-box__text">Sign up and you will be able to track your order and get information about previous purchases. Also get discounts and other special conditions!</p>
+					<div class="account-box__content">
+						<h3 class="account-box__account-header">Account type</h3>
+						<form action="#">
+
+
+							<div class="account-box__account-type-wrap">
+								<input type="radio" name="account-type" value="1" class="account-box__radio" id="legal_entity">
+								<label class="account-box__account-legal" for="legal_entity">
+									<h3>Legal entity</h3>
+									<p>Register your company and buy office products without leaving the office.</p>
+									<i class="account-box__checkbox"></i>
+								</label>
+								<input type="radio" name="account-type" value="2" class="account-box__radio" id="physical_person">
+								<label class="account-box__account-physical" for="physical_person">
+									<h3>Physical person</h3>
+									<p>Do you want to buy our products for you or your home? Sign up and get your order at your desired address.</p>
+									<i class="account-box__checkbox"></i>
+								</label>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="company-info">
+		<div class="container">
+			<div class="company-info__wrap">
+				<div class="row">
 					<form action="#">
-
-
-						<div class="account-box__account-type-wrap">
-							<input type="radio" name="account-type" value="1" class="account-box__radio" id="legal_entity">
-							<label class="account-box__account-legal" for="legal_entity">
-								<h3>Legal entity</h3>
-								<p>Register your company and buy office products without leaving the office.</p>
-								<i class="account-box__checkbox"></i>
-							</label>
-							<input type="radio" name="account-type" value="2" class="account-box__radio" id="physical_person">
-							<label class="account-box__account-physical" for="physical_person">
-								<h3>Physical person</h3>
-								<p>Do you want to buy our products for you or your home? Sign up and get your order at your desired address.</p>
-								<i class="account-box__checkbox"></i>
-							</label>
-
+						<div class="col-lg-12 col-sm-12 col-xs-12">
+							<div class="company-info__about-company">
+								<h2 class="company-info__wrap-head">Information about the company</h2>
+								<label class="company-info__about-company-label">
+									<span>Identification Code</span>
+									<input type="text">
+								</label>
+								<label class="company-info__about-company-label">
+									<span>Company name</span>
+									<input type="text">
+								</label>
+								<label class="company-info__about-company-label">
+									<span>The legal form of the organization</span>
+									<select>
+										<option value="Director1">Director 1</option>
+										<option value="Director2">Director 2</option>
+										<option value="Director3">Director 3</option>
+									</select>
+								</label>
+							</div>
+							<div class="company-info__contacts">
+								<h2 class="company-info__wrap-head">Сontact information</h2>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="company-info__contacts-label">
+										<span>Name</span>
+										<input type="text">
+									</label>
+									<label class="company-info__contacts-label">
+										<span>Last name</span>
+										<input type="text">
+									</label>
+									<label class="company-info__contacts-label">
+										<span>Position</span>
+										<select>
+											<option value="1">Director</option>
+											<option value="2">Director</option>
+											<option value="3">Director</option>
+										</select>
+									</label>
+									<label class="company-info__contacts-label">
+										<span>Office phone number</span>
+										<input type="text">
+									</label>
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="company-info__contacts-label">
+										<span>Mobile phone number</span>
+										<input type="text">
+									</label>
+									<label class="company-info__contacts-label">
+										<span>E-mail</span>
+										<input type="text">
+									</label>
+									<label class="company-info__contacts-label">
+										<span>Alternate email</span>
+										<input type="text">
+									</label>
+								</div>
+							</div>
+							<div class="company-info__office">
+								<h2 class="company-info__wrap-head">Office address</h2>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="company-info__office-label">
+										<span>City:</span>
+										<input type="text">
+									</label>
+									<label class="company-info__office-label">
+										<span>Address:</span>
+										<input type="text">
+									</label>
+									<label class="company-info__office-label">
+										<span>Floor</span>
+										<input type="text">
+									</label>
+									<label class="company-info__office-label">
+										<span>Password</span>
+										<input type="text">
+									</label>
+								</div>
+								<div class="col-lg-6 col-sm-6 col-xs-12">
+									<label class="company-info__office-label">
+										<span>Apartment or office number (eg apartment 1 or office 1)</span>
+										<input type="text">
+									</label>
+									<label class="company-info__office-label">
+										<span>More information about the address</span>
+										<input type="text">
+									</label>
+									<label class="company-info__office-label">
+										<span>Confirm password</span>
+										<input type="text">
+									</label>
+								</div>
+							</div>
 						</div>
 					</form>
 				</div>
 			</div>
 		</div>
 	</div>
+
 </div>
 <footer class="footer">
 	<div class="container">

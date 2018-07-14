@@ -4258,6 +4258,120 @@ header.header {
   right: 40px;
 }
 
+.company-info {
+  background-color: #fff;
+}
+
+.company-info__wrap-head {
+  color: #225a90;
+  height: 23px;
+  font-weight: normal;
+}
+
+.company-info__about-company {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.company-info__about-company-label {
+  width: 50%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.company-info__about-company-label span {
+  display: inline-block;
+  width: 200px;
+  font-size: 14px;
+}
+
+.company-info__about-company-label input, .company-info__about-company-label select {
+  width: 363px;
+  height: 40px;
+}
+
+.company-info__contacts {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.company-info__contacts-label {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.company-info__contacts-label input, .company-info__contacts-label select {
+  width: 363px;
+  height: 40px;
+}
+
+.company-info__contacts-label span {
+  display: inline-block;
+  width: 200px;
+  font-size: 14px;
+}
+
+.company-info__office {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.company-info__office-label {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.company-info__office-label input, .company-info__office-label select {
+  width: 363px;
+  height: 40px;
+}
+
+.company-info__office-label span {
+  display: inline-block;
+  width: 200px;
+  font-size: 14px;
+}
+
+.company-info__wrap-head {
+  display: block;
+  width: 100%;
+}
+
 .account-box__wrap {
   background-color: #fff;
   padding: 33px 24px 42px 21px;

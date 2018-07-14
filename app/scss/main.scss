@@ -1035,6 +1035,75 @@ header.header{
 	right: 40px;
   }
 }
+//***************************************************company info
+.company-info{
+  background-color: #fff;
+  &__wrap{
+  }
+  &__wrap-head{
+	color: #225a90;
+	height: 23px;
+	font-weight: normal;
+  }
+  &__about-company{
+	display: flex;
+	flex-wrap: wrap;
+  }
+  &__about-company-label{
+	width: 50%;
+	display: flex;
+	align-items: center;
+	span{
+	  display: inline-block;
+	  width: 200px;
+	  font-size: 14px;
+	}
+	input, select{
+	  width: 363px;
+	  height: 40px;
+	}
+  }
+  &__contacts{
+	display: flex;
+	flex-wrap: wrap;
+  }
+  &__contacts-label{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	input, select{
+	  width: 363px;
+	  height: 40px;
+	}
+	span{
+	  display: inline-block;
+	  width: 200px;
+	  font-size: 14px;
+	}
+  }
+  &__office{
+	display: flex;
+	flex-wrap: wrap;
+  }
+  &__office-label{
+	width: 100%;
+	display: flex;
+	align-items: center;
+	input, select{
+	  width: 363px;
+	  height: 40px;
+	}
+	span{
+	  display: inline-block;
+	  width: 200px;
+	  font-size: 14px;
+	}
+  }
+  &__wrap-head{
+	display: block;
+	width: 100%;
+  }
+}
 //**************************************************************account-box
 .account-box{
   &__wrap{
