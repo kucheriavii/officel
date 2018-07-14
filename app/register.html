@@ -323,41 +323,32 @@
 			</div>
 		</div>
 	</header>
-	<div class="sign-in">
-		<div class="container">
-			<div class="row">
-				<div class="sign-in-box">
+	<div class="container">
+		<div class="row">
+			<div class="account-box__wrap">
+				<h2 class="account-box__header">User Registration</h2>
+				<p class="account-box__text">Sign up and you will be able to track your order and get information about previous purchases. Also get discounts and other special conditions!</p>
+				<div class="account-box__content">
+					<h3 class="account-box__account-header">Account type</h3>
+					<form action="#">
 
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<form method="POST">
-							<div class="login__wrap">
-								<h2 class="login__header">Login</h2>
-								<label class="login__userdata-name">
-									<span class="login__label-text">Name</span>
-									<input type="text">
-								</label>
-								<label class="login__userdata-Last_name">
-									<span class="login__label-text">Last name</span>
-									<input type="text">
-								</label>
-								<div class="login__panel">
-									<input type="checkbox" class="login__remember-me--checkbox" id="remember-me">
-									<label class="login__remember-me" for="remember-me">Remember me</label>
-									<a href="#" class="login__forgot-password">Forgot Password?</a>
-									<button class="button login__button">Sign in</button>
-								</div>
-							</div>
-						</form>
-					</div>
-					<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-						<form method="POST">
-							<div class="sign-up__wrap">
-								<h2 class="sign-up__header">Sign up!</h2>
-								<div class="sign-up__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A ab aliquam at dolore doloremque dolores ex expedita hic illum magnam nobis perferendis, perspiciatis quam quas quia reprehenderit totam vitae voluptas.</div>
-								<button class="button sign-up__button">Proceed</button>
-							</div>
-						</form>
-					</div>
+
+						<div class="account-box__account-type-wrap">
+							<input type="radio" name="account-type" value="1" class="account-box__radio" id="legal_entity">
+							<label class="account-box__account-legal" for="legal_entity">
+								<h3>Legal entity</h3>
+								<p>Register your company and buy office products without leaving the office.</p>
+								<i class="account-box__checkbox"></i>
+							</label>
+							<input type="radio" name="account-type" value="2" class="account-box__radio" id="physical_person">
+							<label class="account-box__account-physical" for="physical_person">
+								<h3>Physical person</h3>
+								<p>Do you want to buy our products for you or your home? Sign up and get your order at your desired address.</p>
+								<i class="account-box__checkbox"></i>
+							</label>
+
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>

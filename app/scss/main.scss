@@ -257,7 +257,7 @@ header.header{
 }
 .header-main{
   background-color: $gray;
-  padding-top: 20px;
+  padding-top: 19px;
  // padding-bottom: 41px;
   margin-bottom: 0;
 }
@@ -933,6 +933,13 @@ header.header{
 //***************************************************************sign in box
 .sign-in-box{
   box-shadow: -0.6px 5px 54px 0 rgba(66, 73, 79, 0.11);
+  margin-bottom: 250px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.sign-in{
+  margin-top: -1px;
+  background: #f1f3f5;
 }
 .login{
   &__wrap{
@@ -1028,7 +1035,123 @@ header.header{
 	right: 40px;
   }
 }
-//***************************************************************/login
+//**************************************************************account-box
+.account-box{
+  &__wrap{
+	background-color: #fff;
+	padding: 33px 24px 42px 21px;
+	box-shadow: -0.6px 5px 54px 0 rgba(66, 73, 79, 0.11);
+	margin-bottom: 40px;
+	width: 100%;
+  }
+  &__header{
+	font-size: 36px;
+	color: $accent;
+	font-weight: normal;
+  }
+  &__text{
+	font-size: 14px;
+	color: #3f4345;
+	width: 50%;
+	margin-bottom: 20px;
+  }
+  &__content{
+	margin-top: 33px;
+	.account-box__account-header{
+	  color: $accent;
+	  font-size: 24px;
+	  font-weight: normal;
+	}
+  }
+  &__account-type-wrap{
+	display: flex;
+	height: 170px;
+	input[type='radio']{
+	  display: none;
+	}
+	.account-box__radio{
+	  display: block;
+	}
+	#legal_entity:checked+.account-box__account-legal .account-box__checkbox{
+	  background-image: url("../img/icons/checkbox-person.png");
+	}
+	#physical_person:checked+.account-box__account-physical .account-box__checkbox{
+	  background-image: url("../img/icons/checkbox-person.png");
+	}
+  }
+  &__account-legal, &__account-physical{
+	width: 565px;
+  }
+  &__checkbox{
+	display: block;
+	background-color: #fff;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	background-image: url("../img/icons/checkbox-normal.png");
+	width: 16px;
+	height: 16px;
+  }
+  &__account-legal{
+	background-image: linear-gradient(to left, #f0f3f5, #a7c363), linear-gradient(#a7c363, #a7c363);
+	box-shadow: -0.6px 5px 10px 0 rgba(145, 153, 158, 0.23);
+	margin-right: 20px;
+	padding: 21px 175px 25px 25px;
+	color: #fff;
+	position: relative;
+	&:after{
+	  content: "";
+	  position: absolute;
+	  right: 0;
+	  //background-image: url('../img/icons/person.png');
+	  background-repeat: no-repeat;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  width: 150px;
+	  height: 129px;
+	  display: block;
+	}
+	h3{
+	  font-size: 24px;
+	  line-height: 1.5;
+	  font-weight: normal;
+	  margin-bottom: 24px;
+	}
+	p{
+	  font-size: 16px;
+	}
+  }
+  &__account-physical{
+	margin-left: 20px;
+	background-image: linear-gradient(to left, #f0f3f5, #ef4e4e), linear-gradient(#ff5d69, #ff5d69);
+	margin-right: 20px;
+	padding: 21px 80px 25px 25px;
+	color: #fff;
+	position: relative;
+	&:after{
+	  content: "";
+	  position: absolute;
+	  right: 0;
+	  background-image: url('../img/icons/person.svg');
+	  background-repeat: no-repeat;
+	  top: 50%;
+	  transform: translateY(-50%);
+	  width: 123px;
+	  height: 100px;
+	  display: block;
+	  background-size: cover;
+	}
+	h3{
+	  font-size: 24px;
+	  line-height: 1.5;
+	  font-weight: normal;
+	  margin-bottom: 24px;
+	}
+	p{
+	  font-size: 16px;
+	}
+  }
+}
 .articles, .items, .offers, .your-shoppings, .recomends-item{
   padding-top: 51px;
   background-color: #fff;

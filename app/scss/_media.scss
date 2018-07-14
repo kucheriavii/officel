@@ -278,6 +278,9 @@
       width: 100%;
     }
   }
+  .sign-in-box{
+	margin-bottom: 50px;
+  }
   .articles-header-wrap{
     margin-left: 17px;
     margin-right: 17px;
@@ -642,7 +645,6 @@
   }
 
   /*catalog line view*/
-
   .items-catalog__wrap.line-view{
     display: flex;
     .item__price-wrap{
