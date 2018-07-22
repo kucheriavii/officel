@@ -370,26 +370,29 @@
 								<label class="company-info__about-company-label">
 									<span>Company name</span>
 									<input type="text">
+									<span class="company-info__wrong-text">text</span>
 								</label>
 								<label class="company-info__about-company-label">
 									<span>The legal form of the organization</span>
-									<select>
+									<select class="company-info__about-company-select">
 										<option value="Director1">Director 1</option>
-										<option value="Director2">Director 2</option>
+										<option value="Director2" class="selected">Director 2</option>
 										<option value="Director3">Director 3</option>
 									</select>
 								</label>
 							</div>
 							<div class="company-info__contacts">
 								<h2 class="company-info__wrap-head">Сontact information</h2>
-								<div class="col-lg-6 col-sm-6 col-xs-12">
+								<div class="col-lg-6 col-sm-12 col-xs-12">
 									<label class="company-info__contacts-label">
 										<span>Name</span>
-										<input type="text">
+										<input type="text" class="company-info__wrong">
+										<span class="company-info__wrong-text">test test</span>
 									</label>
 									<label class="company-info__contacts-label">
 										<span>Last name</span>
 										<input type="text">
+										<span class="company-info__wrong-text"></span>
 									</label>
 									<label class="company-info__contacts-label">
 										<span>Position</span>
@@ -397,17 +400,21 @@
 											<option value="1">Director</option>
 											<option value="2">Director</option>
 											<option value="3">Director</option>
+											<option value="3">Directored</option>
 										</select>
+										<span class="company-info__wrong-text"></span>
 									</label>
 									<label class="company-info__contacts-label">
 										<span>Office phone number</span>
 										<input type="text">
+										<span class="company-info__wrong-text"></span>
 									</label>
 								</div>
-								<div class="col-lg-6 col-sm-6 col-xs-12">
+								<div class="col-lg-6 col-sm-12 col-xs-12">
 									<label class="company-info__contacts-label">
 										<span>Mobile phone number</span>
 										<input type="text">
+										<span class="company-info__wrong-text"></span>
 									</label>
 									<label class="company-info__contacts-label">
 										<span>E-mail</span>
@@ -421,7 +428,7 @@
 							</div>
 							<div class="company-info__office">
 								<h2 class="company-info__wrap-head">Office address</h2>
-								<div class="col-lg-6 col-sm-6 col-xs-12">
+								<div class="col-lg-6 col-sm-12 col-xs-12">
 									<label class="company-info__office-label">
 										<span>City:</span>
 										<input type="text">
@@ -439,20 +446,33 @@
 										<input type="text">
 									</label>
 								</div>
-								<div class="col-lg-6 col-sm-6 col-xs-12">
+								<div class="col-lg-6 col-sm-12 col-xs-12">
 									<label class="company-info__office-label">
 										<span>Apartment or office number (eg apartment 1 or office 1)</span>
 										<input type="text">
 									</label>
 									<label class="company-info__office-label">
 										<span>More information about the address</span>
-										<input type="text">
+										<textarea type="text" class="company-info__detail-address-input" rows="2"></textarea>
 									</label>
 									<label class="company-info__office-label">
 										<span>Confirm password</span>
 										<input type="text">
 									</label>
 								</div>
+							</div>
+						</div>
+						<div class="col-lg-12 col-sm-12 col-xs-12">
+							<div class="company-info__additional-questions">
+								<div class="company-info__checkbox-wrap">
+									<input type="checkbox" id="subscribe-to-newsletters">
+									<label for="subscribe-to-newsletters"><span>Subscribe to newsletters</span></label>
+								</div>
+								<div class="company-info__checkbox-wrap">
+									<input type="checkbox" id="agree-terms">
+									<label for="agree-terms" class="company-info__checkbox-label"><span>I agree with the terms and conditions *</span></label>
+								</div>
+								<button class="button">Proceed</button>
 							</div>
 						</div>
 					</form>

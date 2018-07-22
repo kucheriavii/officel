@@ -1044,15 +1044,22 @@ header.header{
 	color: #225a90;
 	height: 23px;
 	font-weight: normal;
+	margin-top: 22px;
+	margin-bottom: 35px;
   }
   &__about-company{
 	display: flex;
 	flex-wrap: wrap;
   }
+  &__about-company-select{
+	background-color: #fff;
+  }
   &__about-company-label{
 	width: 50%;
 	display: flex;
 	align-items: center;
+	margin-bottom: 20px;
+	position: relative;
 	span{
 	  display: inline-block;
 	  width: 200px;
@@ -1061,7 +1068,54 @@ header.header{
 	input, select{
 	  width: 363px;
 	  height: 40px;
+	  padding-left: 14px;
+	  padding-right: 14px;
+	  border: 1px solid #e8ecef;
 	}
+	select{
+	  -webkit-appearance: button;
+	  -moz-appearance: button;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -webkit-padding-end: 20px;
+	  -moz-padding-end: 20px;
+	  -webkit-padding-start: 2px;
+	  -moz-padding-start: 2px;
+	  background-position: center right;
+	  background-repeat: no-repeat;
+	  border: 1px solid #AAA;
+	  border-radius: 2px;
+	  color: #555;
+	  font-size: inherit;
+	  margin: 0;
+	  overflow: hidden;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  background-image: url("../img/icons/arrow-down.png");
+	  padding-right: 13px;
+	  background-position: 329px;
+	  border: 1px solid #e8ecef;
+	  &.selected{
+		background-image: url("../img/icons/arrow-up.png");
+	  }
+	}
+	option{
+	  color: #858f92;
+	  display: block;
+	}
+  }
+  &__wrong{
+	border: 1px solid #f45357;
+  }
+  &__wrong-text{
+	display: block;
+	position: absolute;
+	left: 200px;
+	top: 39px;
+	font-size: 10px !important;
+	color: #f45357;
   }
   &__contacts{
 	display: flex;
@@ -1071,9 +1125,47 @@ header.header{
 	width: 100%;
 	display: flex;
 	align-items: center;
+	margin-bottom: 19px;
+	position: relative;
 	input, select{
 	  width: 363px;
 	  height: 40px;
+	  padding-left: 14px;
+	  padding-right: 14px;
+	  border: 1px solid #e8ecef;
+	}
+	select{
+	  -webkit-appearance: button;
+	  -moz-appearance: button;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -webkit-padding-end: 20px;
+	  -moz-padding-end: 20px;
+	  -webkit-padding-start: 2px;
+	  -moz-padding-start: 2px;
+	  background-position: center right;
+	  background-repeat: no-repeat;
+	  border: 1px solid #AAA;
+	  border-radius: 2px;
+	  color: #555;
+	  font-size: inherit;
+	  margin: 0;
+	  overflow: hidden;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  background-image: url("../img/icons/arrow-down.png");
+	  padding-right: 13px;
+	  background-position: 329px;
+	  border: 1px solid #e8ecef;
+	  &.selected{
+		background-image: url("../img/icons/arrow-up.png");
+	  }
+	}
+	option{
+	  color: #858f92;
+	  display: block;
 	}
 	span{
 	  display: inline-block;
@@ -1089,9 +1181,49 @@ header.header{
 	width: 100%;
 	display: flex;
 	align-items: center;
-	input, select{
+	margin-bottom: 19px;
+	position: relative;
+	input, select, textarea{
 	  width: 363px;
 	  height: 40px;
+	  padding-left: 14px;
+	  padding-right: 14px;
+	  border: 1px solid #e8ecef;
+	}
+	textarea{
+	  height: 93px;
+	}
+	.company-info__detail-address-input{
+
+	}
+	select{
+	  -webkit-appearance: button;
+	  -moz-appearance: button;
+	  -webkit-user-select: none;
+	  -moz-user-select: none;
+	  -webkit-padding-end: 20px;
+	  -moz-padding-end: 20px;
+	  -webkit-padding-start: 2px;
+	  -moz-padding-start: 2px;
+	  background-position: center right;
+	  background-repeat: no-repeat;
+	  border: 1px solid #AAA;
+	  border-radius: 2px;
+	  color: #555;
+	  font-size: inherit;
+	  margin: 0;
+	  overflow: hidden;
+	  padding-top: 2px;
+	  padding-bottom: 2px;
+	  text-overflow: ellipsis;
+	  white-space: nowrap;
+	  background-image: url("../img/icons/arrow-down.png");
+	  padding-right: 13px;
+	  background-position: 329px;
+	  border: 1px solid #e8ecef;
+	  &.selected{
+		background-image: url("../img/icons/arrow-up.png");
+	  }
 	}
 	span{
 	  display: inline-block;
@@ -1102,6 +1234,50 @@ header.header{
   &__wrap-head{
 	display: block;
 	width: 100%;
+  }
+  &__additional-questions{
+	position: relative;
+	background-color: #e8ecef;
+	height: 100px;
+	padding-top: 27px;
+	padding-bottom: 19px;
+	margin-top: 40px;
+	margin-bottom: 78px;
+	padding-left: 20px;
+	button{
+	  min-width: 142px;
+	  position: absolute;
+	  right: 81px;
+	  bottom: 22px;
+	}
+  }
+  &__checkbox-wrap{
+	input{
+	  display: none;
+	}
+	label{
+	  display: flex;
+	  align-items: center;
+	  font-size: 14px;
+	}
+	label:before{
+	  content: "";
+	  border: none;
+	  display: inline-block;
+	  border: 1px solid $green;
+	  width: 16px;
+	  height: 16px;
+	  margin-right: 14px;
+	}
+  }
+  #agree-terms:checked+label:before,#subscribe-to-newsletters:checked+label:before{
+	content: "";
+	border: none;
+	display: inline-block;
+	background-image: url("../img/icons/checkbox-green.png");
+	width: 16px;
+	height: 16px;
+	margin-right: 14px;
   }
 }
 //**************************************************************account-box
@@ -1134,7 +1310,7 @@ header.header{
   }
   &__account-type-wrap{
 	display: flex;
-	height: 170px;
+	min-height: 170px;
 	input[type='radio']{
 	  display: none;
 	}
@@ -1149,7 +1325,8 @@ header.header{
 	}
   }
   &__account-legal, &__account-physical{
-	width: 565px;
+	max-width: 565px;
+	width: 50%;
   }
   &__checkbox{
 	display: block;
@@ -1193,7 +1370,7 @@ header.header{
   &__account-physical{
 	margin-left: 20px;
 	background-image: linear-gradient(to left, #f0f3f5, #ef4e4e), linear-gradient(#ff5d69, #ff5d69);
-	margin-right: 20px;
+	//margin-right: 20px;
 	padding: 21px 80px 25px 25px;
 	color: #fff;
 	position: relative;

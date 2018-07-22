@@ -4266,6 +4266,8 @@ header.header {
   color: #225a90;
   height: 23px;
   font-weight: normal;
+  margin-top: 22px;
+  margin-bottom: 35px;
 }
 
 .company-info__about-company {
@@ -4278,6 +4280,10 @@ header.header {
           flex-wrap: wrap;
 }
 
+.company-info__about-company-select {
+  background-color: #fff;
+}
+
 .company-info__about-company-label {
   width: 50%;
   display: -webkit-box;
@@ -4288,6 +4294,8 @@ header.header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
+  position: relative;
 }
 
 .company-info__about-company-label span {
@@ -4299,6 +4307,60 @@ header.header {
 .company-info__about-company-label input, .company-info__about-company-label select {
   width: 363px;
   height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: 1px solid #e8ecef;
+}
+
+.company-info__about-company-label select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  background-image: url("../img/icons/arrow-down.png");
+  padding-right: 13px;
+  background-position: 329px;
+  border: 1px solid #e8ecef;
+}
+
+.company-info__about-company-label select.selected {
+  background-image: url("../img/icons/arrow-up.png");
+}
+
+.company-info__about-company-label option {
+  color: #858f92;
+  display: block;
+}
+
+.company-info__wrong {
+  border: 1px solid #f45357;
+}
+
+.company-info__wrong-text {
+  display: block;
+  position: absolute;
+  left: 200px;
+  top: 39px;
+  font-size: 10px !important;
+  color: #f45357;
 }
 
 .company-info__contacts {
@@ -4321,11 +4383,54 @@ header.header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 19px;
+  position: relative;
 }
 
 .company-info__contacts-label input, .company-info__contacts-label select {
   width: 363px;
   height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: 1px solid #e8ecef;
+}
+
+.company-info__contacts-label select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  background-image: url("../img/icons/arrow-down.png");
+  padding-right: 13px;
+  background-position: 329px;
+  border: 1px solid #e8ecef;
+}
+
+.company-info__contacts-label select.selected {
+  background-image: url("../img/icons/arrow-up.png");
+}
+
+.company-info__contacts-label option {
+  color: #858f92;
+  display: block;
 }
 
 .company-info__contacts-label span {
@@ -4354,11 +4459,53 @@ header.header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 19px;
+  position: relative;
 }
 
-.company-info__office-label input, .company-info__office-label select {
+.company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea {
   width: 363px;
   height: 40px;
+  padding-left: 14px;
+  padding-right: 14px;
+  border: 1px solid #e8ecef;
+}
+
+.company-info__office-label textarea {
+  height: 93px;
+}
+
+.company-info__office-label select {
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-padding-end: 20px;
+  -moz-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -moz-padding-start: 2px;
+  background-position: center right;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  -webkit-border-radius: 2px;
+          border-radius: 2px;
+  color: #555;
+  font-size: inherit;
+  margin: 0;
+  overflow: hidden;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  -o-text-overflow: ellipsis;
+     text-overflow: ellipsis;
+  white-space: nowrap;
+  background-image: url("../img/icons/arrow-down.png");
+  padding-right: 13px;
+  background-position: 329px;
+  border: 1px solid #e8ecef;
+}
+
+.company-info__office-label select.selected {
+  background-image: url("../img/icons/arrow-up.png");
 }
 
 .company-info__office-label span {
@@ -4370,6 +4517,60 @@ header.header {
 .company-info__wrap-head {
   display: block;
   width: 100%;
+}
+
+.company-info__additional-questions {
+  position: relative;
+  background-color: #e8ecef;
+  height: 100px;
+  padding-top: 27px;
+  padding-bottom: 19px;
+  margin-top: 40px;
+  margin-bottom: 78px;
+  padding-left: 20px;
+}
+
+.company-info__additional-questions button {
+  min-width: 142px;
+  position: absolute;
+  right: 81px;
+  bottom: 22px;
+}
+
+.company-info__checkbox-wrap input {
+  display: none;
+}
+
+.company-info__checkbox-wrap label {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 14px;
+}
+
+.company-info__checkbox-wrap label:before {
+  content: "";
+  border: none;
+  display: inline-block;
+  border: 1px solid #a7c363;
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
+}
+
+.company-info #agree-terms:checked + label:before, .company-info #subscribe-to-newsletters:checked + label:before {
+  content: "";
+  border: none;
+  display: inline-block;
+  background-image: url("../img/icons/checkbox-green.png");
+  width: 16px;
+  height: 16px;
+  margin-right: 14px;
 }
 
 .account-box__wrap {
@@ -4409,7 +4610,7 @@ header.header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  height: 170px;
+  min-height: 170px;
 }
 
 .account-box__account-type-wrap input[type='radio'] {
@@ -4429,7 +4630,8 @@ header.header {
 }
 
 .account-box__account-legal, .account-box__account-physical {
-  width: 565px;
+  max-width: 565px;
+  width: 50%;
 }
 
 .account-box__checkbox {
@@ -4487,7 +4689,6 @@ header.header {
   background-image: -webkit-linear-gradient(right, #f0f3f5, #ef4e4e), -webkit-linear-gradient(#ff5d69, #ff5d69);
   background-image: -o-linear-gradient(right, #f0f3f5, #ef4e4e), -o-linear-gradient(#ff5d69, #ff5d69);
   background-image: linear-gradient(to left, #f0f3f5, #ef4e4e), linear-gradient(#ff5d69, #ff5d69);
-  margin-right: 20px;
   padding: 21px 80px 25px 25px;
   color: #fff;
   position: relative;
@@ -6143,6 +6344,21 @@ header.header {
   .header-top .phone-link {
     font-size: 15px;
   }
+  .company-info__office {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .company-info__contacts {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .company-info__about-company {
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .company-info__about-company-label select {
+    background-position: 226px;
+  }
   .items-catalog__wrap {
     -webkit-box-pack: center;
     -webkit-justify-content: center;
@@ -6162,6 +6378,15 @@ header.header {
   .wrapper .items-catalog--category .pagenav {
     margin-right: 21px;
     margin-left: 21px;
+  }
+  .company-info__about-company-label input, .company-info__about-company-label select {
+    width: 260px;
+  }
+  .company-info__contacts-label input, .company-info__contacts-label select {
+    width: 260px;
+  }
+  .company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea {
+    width: 260px;
   }
 }
 
@@ -6274,7 +6499,16 @@ header.header {
     padding-right: 3px;
     border: 1px solid #d7dee3;
   }
+  .company-info__about-company-label {
+    width: 100%;
+  }
+  .company-info__wrap-head {
+    text-align: center;
+  }
   /************sandwich styles*********/
+  .company-info__about-company, .company-info__contacts, .company-info__office {
+    padding-left: 21px;
+  }
   .container {
     max-width: 100%;
     width: 100%;
@@ -6745,6 +6979,20 @@ header.header {
   .header-item__slider .slick-prev {
     display: none;
   }
+  .account-box__account-type-wrap {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .account-box__account-legal, .account-box__account-physical {
+    width: 100%;
+    margin: 0;
+    margin-top: 16px;
+  }
   .articles-wrap {
     margin-left: 0;
     margin-right: 0;
@@ -6788,6 +7036,32 @@ header.header {
   .header-user__order-num, .header-user__join-num {
     width: 100%;
     margin: 0 auto;
+  }
+  .company-info__about-company-label, .company-info__contacts-label, .company-info__office-label {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+  }
+  .company-info__about-company-label span, .company-info__contacts-label span, .company-info__office-label span {
+    display: block;
+    width: 100%;
+  }
+  .company-info__about-company-label input, .company-info__about-company-label select, .company-info__about-company-label textarea, .company-info__contacts-label input, .company-info__contacts-label select, .company-info__contacts-label textarea, .company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea {
+    width: 100%;
+    margin-right: 14px;
+  }
+  .company-info__about-company-label select, .company-info__contacts-label select, .company-info__office-label select {
+    background-position: 97%;
+  }
+  .company-info__about-company-label .company-info__wrong-text, .company-info__contacts-label .company-info__wrong-text, .company-info__office-label .company-info__wrong-text {
+    top: 66px;
+    left: 0;
+  }
+  .company-info__additional-questions {
+    height: 165px;
+  }
+  .company-info__additional-questions button {
+    right: 14px;
   }
   .article {
     width: 100%;

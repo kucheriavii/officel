@@ -38,6 +38,21 @@
   //*******************************************************end of header 1200
 
   //*******************************************************catalog page
+  .company-info__office{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .company-info__contacts{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .company-info__about-company{
+    padding-left: 14px;
+    padding-right: 14px;
+  }
+  .company-info__about-company-label select{
+    background-position: 226px;
+  }
   .items-catalog__wrap{
     justify-content: center;
   }
@@ -52,6 +67,15 @@
   .wrapper .items-catalog--category .pagenav{
 	margin-right: 21px;
 	margin-left: 21px;
+  }
+  .company-info__about-company-label input, .company-info__about-company-label select{
+    width: 260px;
+  }
+  .company-info__contacts-label input, .company-info__contacts-label select{
+    width: 260px;
+  }
+  .company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea{
+    width: 260px;
   }
 }
 
@@ -157,8 +181,17 @@
     padding-right: 3px;
     border: 1px solid #d7dee3;
   }
+  .company-info__about-company-label{
+    width: 100%;
+  }
+  .company-info__wrap-head{
+    text-align: center;
+  }
 
 /************sandwich styles*********/
+  .company-info__about-company, .company-info__contacts, .company-info__office{
+    padding-left: 21px;
+  }
   .container{
     max-width: 100%;
     width: 100%;
@@ -559,6 +592,15 @@
     display: none;
   }
   //****************************************************************************************end of header 768px
+  .account-box__account-type-wrap{
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .account-box__account-legal,.account-box__account-physical{
+    width: 100%;
+    margin: 0;
+    margin-top: 16px;
+  }
   .articles-wrap{
     margin-left: 0;
     margin-right: 0;
@@ -608,7 +650,30 @@
     width: 100%;
     margin: 0 auto;
   }
-
+  .company-info__about-company-label, .company-info__contacts-label, .company-info__office-label{
+    flex-wrap: wrap;
+    span{
+      display: block;
+      width: 100%;
+    }
+    input, select,textarea{
+      width: 100%;
+      margin-right: 14px;
+    }
+    select{
+      background-position:  97%;
+    }
+    .company-info__wrong-text{
+      top: 66px;
+      left: 0;
+    }
+  }
+  .company-info__additional-questions{
+    height: 165px;
+    button{
+      right: 14px;
+    }
+  }
   .article{
     width: 100%;
     margin-right: 0;
