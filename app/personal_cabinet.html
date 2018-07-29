@@ -329,76 +329,78 @@
 				<div class="row">
 					<div class="cabinet__wrap">
 						<ul class="cabinet__toolbar">
-							<li class="cabinet__toolbar-tab active">
+							<li class="cabinet__toolbar-tab active" data-toolbar-tab="cabinet__main-menu">
 								<span class="cabinet__toolbar-header">Personal cabinet</span>
 							</li>
-							<li class="cabinet__toolbar-tab">
+							<li class="cabinet__toolbar-tab" data-toolbar-tab="cabinet__orders">
 								<span class="cabinet__toolbar-header">My orders</span>
 							</li>
-							<li class="cabinet__toolbar-tab">
-								<span class="cabinet__toolbar-header">Previously ordered products</span>
+							<li class="cabinet__toolbar-tab" data-toolbar-tab="cabinet__prev-orders">
+								<a href="#" class="cabinet__toolbar-header">Previously ordered products</a>
 							</li>
-							<li class="cabinet__toolbar-tab">
-								<span class="cabinet__toolbar-header">My account</span>
+							<li class="cabinet__toolbar-tab" data-toolbar-tab="cabinet__my-account">
+								<span class="cabinet__toolbar-header">My account <i class="cabinet__toolbar-header-show"></i></span>
 								<ul class="cabinet__toolbar-submenu">
-									<li class="cabinet__toolbar-submenu-tab">Personal information</li>
-									<li class="cabinet__toolbar-submenu-tab">Change password</li>
+									<li class="cabinet__toolbar-submenu-tab" data-toolbar-tab="cabinet__my-account"><span>Personal information</span></li>
+									<li class="cabinet__toolbar-submenu-tab" data-toolbar-tab="cabinet__prev-orders"><span>Change password</span></li>
 								</ul>
 							</li>
-							<li class="cabinet__toolbar-tab">
+							<li class="cabinet__toolbar-tab" data-toolbar-tab="cabinet__support">
 								<span class="cabinet__toolbar-header">Online Support</span>
 							</li>
 						</ul>
 						<button class="cabinet__logout-btn"></button>
-						<div class="cabinet__main-menu" style="display: none">
-							<div class="cabinet__personal-info">
-								<div class="cabinet__personal-info-name">Hello, Kristina!</div>
-								<div class="cabinet__personal-info-balance">
-									<h3>თქვენი ბალანსი</h3>
-									<span class="cabinet__personal-info-balance-update">ლების თარიღი <b>01.01.01</b></span>
-									<div class="header-user__balance-count cabinet__balance-count">
-										<img src="img/wallet-icon.png" alt="wallet">
-										<span class="cabinet__balance-int">1.893$</span>
+						<div class="cabinet__article cabinet__main-menu">
+							<div class="cabinet__main-menu-wrap">
+								<div class="cabinet__personal-info">
+									<div class="cabinet__personal-info-name">Hello, Kristina!</div>
+									<div class="cabinet__personal-info-balance">
+										<h3>თქვენი ბალანსი</h3>
+										<span class="cabinet__personal-info-balance-update">ლების თარიღი <b>01.01.01</b></span>
+										<div class="header-user__balance-count cabinet__balance-count">
+											<img src="img/wallet-icon.png" alt="wallet">
+											<span class="cabinet__balance-int">1.893$</span>
+										</div>
 									</div>
 								</div>
+								<ul class="cabinet__options">
+									<li class="cabinet__option cabinet__option--my-order">
+										<a href="#" class="cabinet__option-wrap">
+											<div class="cabinet__option-icon">
+												<img src="img/icons/orders.png" alt="order icon">
+											</div>
+											<h3 class="cabinet__option-header">My orders</h3>
+										</a>
+									</li>
+									<li class="cabinet__option cabinet__option--my-information">
+										<a href="#" class="cabinet__option-wrap">
+											<div class="cabinet__option-icon">
+												<img src="img/icons/info.png" alt="info icon">
+											</div>
+											<h3 class="cabinet__option-header">My Information</h3>
+										</a>
+									</li>
+									<li class="cabinet__option cabinet__option--prev-order">
+										<a href="#" class="cabinet__option-wrap">
+											<div class="cabinet__option-icon">
+												<img src="img/icons/products.png" alt="products icon">
+											</div>
+											<h3 class="cabinet__option-header">Previously ordered products</h3>
+										</a>
+									</li>
+									<li class="cabinet__option cabinet__option--online-support">
+										<a href="#" class="cabinet__option-wrap">
+											<div class="cabinet__option-icon">
+												<img src="img/icons/support.png" alt="support icon">
+											</div>
+											<h3 class="cabinet__option-header">Online support</h3>
+										</a>
+									</li>
+								</ul>
+								<a class="cabinet__logout" href="#"></a>
 							</div>
-							<ul class="cabinet__options">
-								<li class="cabinet__option cabinet__option--my-order">
-									<a href="#" class="cabinet__option-wrap">
-										<div class="cabinet__option-icon">
-											<img src="img/icons/orders.png" alt="order icon">
-										</div>
-										<h3 class="cabinet__option-header">My orders</h3>
-									</a>
-								</li>
-								<li class="cabinet__option cabinet__option--my-information">
-									<a href="#" class="cabinet__option-wrap">
-										<div class="cabinet__option-icon">
-											<img src="img/icons/info.png" alt="info icon">
-										</div>
-										<h3 class="cabinet__option-header">My Information</h3>
-									</a>
-								</li>
-								<li class="cabinet__option cabinet__option--prev-order">
-									<a href="#" class="cabinet__option-wrap">
-										<div class="cabinet__option-icon">
-											<img src="img/icons/products.png" alt="products icon">
-										</div>
-										<h3 class="cabinet__option-header">Previously ordered products</h3>
-									</a>
-								</li>
-								<li class="cabinet__option cabinet__option--online-support">
-									<a href="#" class="cabinet__option-wrap">
-										<div class="cabinet__option-icon">
-											<img src="img/icons/support.png" alt="support icon">
-										</div>
-										<h3 class="cabinet__option-header">Online support</h3>
-									</a>
-								</li>
-							</ul>
-							<a class="cabinet__logout" href="#"></a>
 						</div>
-						<div class="cabinet__orders" style="display: none">
+						<div class="cabinet__article cabinet__orders">
 							<h2 class="cabinet__orders-header">My orders</h2>
 							<div class="cabinet__orders-table">
 								<div class="cabinet__orders-table--header">
@@ -491,7 +493,7 @@
 								</div>
 							</div>
 						</div>
-						<div class="cabinet__order-details">
+						<div class="cabinet__article cabinet__order-details">
 							<h2 class="cabinet__order-details-header">Order details</h2>
 							<div class="cabinet__order-details-info">
 								<h3 class="cabinet__order-details-info-header">Information about your order #114142</h3>
@@ -589,6 +591,370 @@
 									<a href="#" class="button cabinet__order-button-download">Download invoice</a>
 								</div>
 
+							</div>
+						</div>
+						<div class="cabinet__article cabinet__prev-orders">
+							<h2 class="cabinet__prev-orders-header">Previously ordered products</h2>
+							<a href="#" class="cabinet__prev-orders-sort">From the newest to the oldest</a>
+							<div class="cabinet__prev-orders-items-wrap">
+								<article class="item item-similar">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/r_imgs.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__price">$ 8,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Similar products
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__price">$ 8,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item item-similar">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item item-similar">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+								<article class="item">
+									<a href="#">
+										<div class="item__picture-wrap">
+											<img src="img/item1.jpg" alt="item image" class="item__picture">
+											<div class="item__tools">
+												<div class="item__tool">sale</div>
+												<!--<div class="item__tool">sale</div>-->
+											</div>
+										</div>
+										<div class="item__info-wrap">
+											<h3 class="item__title">Otto Pastel Rubbish Bin Green yellow blue</h3>
+											<div class="price item__price-wrap">
+												<span class="item__actual-price">$ 8,95</span>
+												<span class="item__old-price">$ 10,95</span>
+											</div>
+										</div>
+									</a>
+									<button class="button button-item-add">
+										Add to cart
+									</button>
+								</article>
+							</div>
+							<div class="pagenav">
+								<div class="pagenav__wrap">
+									<div class="panel-nav">
+										<button class="prev-slide"></button>
+										<button class="next-slide"></button>
+									</div>
+									<ul class="pagination">
+										<li class="active"><a href="#">1</a></li>
+										<li><a href="#">2</a></li>
+										<li><a href="#">3</a></li>
+										<li><a href="#">...</a></li>
+										<li><a href="#">146</a></li>
+									</ul>
+								</div>
+								<a href="#" class="button pagenav__load-more">Load more</a>
+							</div>
+						</div>
+						<div class="cabinet__article cabinet__support">
+							<h2 class="cabinet__support-header">Online support</h2>
+							<form action="#">
+								<div class="cabinet__support-form-wrap">
+									<label class="cabinet__support-label">
+										<span class="cabinet__support-label-text">E-mail</span>
+										<input type="text">
+									</label>
+									<label class="cabinet__support-label">
+										<span class="cabinet__support-label-text">Enter your message</span>
+										<textarea name="support-message" id="" cols="30" rows="10"></textarea>
+									</label>
+								</div>
+								<button class="button">Save chabges</button>
+							</form>
+						</div>
+						<div class="cabinet__article cabinet__my-account">
+							<div class="company-info__wrap">
+								<div class="row">
+									<form action="#">
+										<div class="col-lg-12 col-sm-12 col-xs-12">
+											<div class="company-info__about-company">
+												<h2 class="company-info__wrap-head">Information about the company</h2>
+												<label class="company-info__about-company-label">
+													<span>Identification Code</span>
+													<input type="text">
+												</label>
+												<label class="company-info__about-company-label">
+													<span>Company name</span>
+													<input type="text">
+													<span class="company-info__wrong-text">text</span>
+												</label>
+												<label class="company-info__about-company-label">
+													<span>The legal form of the organization</span>
+													<select class="company-info__about-company-select">
+														<option value="Director1">Director 1</option>
+														<option value="Director2" class="selected">Director 2</option>
+														<option value="Director3">Director 3</option>
+													</select>
+												</label>
+											</div>
+											<div class="company-info__contacts">
+												<h2 class="company-info__wrap-head">Сontact information</h2>
+												<div class="col-lg-6 col-sm-12 col-xs-12">
+													<label class="company-info__contacts-label">
+														<span>Name</span>
+														<input type="text" class="company-info__wrong">
+														<span class="company-info__wrong-text">test test</span>
+													</label>
+													<label class="company-info__contacts-label">
+														<span>Last name</span>
+														<input type="text">
+														<span class="company-info__wrong-text"></span>
+													</label>
+													<label class="company-info__contacts-label">
+														<span>Position</span>
+														<select>
+															<option value="1">Director</option>
+															<option value="2">Director</option>
+															<option value="3">Director</option>
+															<option value="3">Directored</option>
+														</select>
+														<span class="company-info__wrong-text"></span>
+													</label>
+												</div>
+												<div class="col-lg-6 col-sm-12 col-xs-12">
+													<label class="company-info__contacts-label">
+														<span>Mobile phone number</span>
+														<input type="text">
+														<span class="company-info__wrong-text"></span>
+													</label>
+													<label class="company-info__contacts-label">
+														<span>E-mail</span>
+														<input type="text">
+													</label>
+													<label class="company-info__contacts-label">
+														<span>Alternate email</span>
+														<input type="text">
+													</label>
+												</div>
+											</div>
+											<div class="company-info__office">
+												<h2 class="company-info__wrap-head">Office address</h2>
+												<div class="col-lg-6 col-sm-12 col-xs-12">
+													<label class="company-info__office-label">
+														<span>City:</span>
+														<input type="text">
+													</label>
+													<label class="company-info__office-label">
+														<span>Address:</span>
+														<input type="text">
+													</label>
+													<label class="company-info__office-label">
+														<span>Floor</span>
+														<input type="text">
+													</label>
+												</div>
+												<div class="col-lg-6 col-sm-12 col-xs-12">
+													<label class="company-info__office-label">
+														<span>Apartment or office number (eg apartment 1 or office 1)</span>
+														<input type="text">
+													</label>
+													<label class="company-info__office-label">
+														<span>More information about the address</span>
+														<textarea type="text" class="company-info__detail-address-input" rows="2"></textarea>
+													</label>
+													<a href="#" class="button cabinet__my-account-button">Save changes</a>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
 							</div>
 						</div>
 					</div>

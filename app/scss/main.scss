@@ -1097,7 +1097,7 @@ header.header{
 	  padding-right: 13px;
 	  background-position: 329px;
 	  border: 1px solid #e8ecef;
-	  &.selected{
+	  &:focus{
 		background-image: url("../img/icons/arrow-up.png");
 	  }
 	}
@@ -1159,7 +1159,7 @@ header.header{
 	  padding-right: 13px;
 	  background-position: 329px;
 	  border: 1px solid #e8ecef;
-	  &.selected{
+	  &:focus{
 		background-image: url("../img/icons/arrow-up.png");
 	  }
 	}
@@ -1221,7 +1221,7 @@ header.header{
 	  padding-right: 13px;
 	  background-position: 329px;
 	  border: 1px solid #e8ecef;
-	  &.selected{
+	  &:focus{
 		background-image: url("../img/icons/arrow-up.png");
 	  }
 	}
@@ -1597,6 +1597,9 @@ header.header{
   &__actual-price{
 	margin-right: 5px;
 	color: #ef4e4e;
+  }
+  &__price{
+	color: $accent;
   }
   &__old-price{
 	color: #b4bfc9;
@@ -2070,6 +2073,12 @@ header.header{
 .cabinet{
   margin-top: -1px;
   background: #f1f3f5;
+  .cabinet__article{
+	display: none;
+	&.cabinet__main-menu{
+	  display: block;
+	}
+  }
   &__wrap{
 	position: relative;
 	display: flex;
@@ -2093,16 +2102,38 @@ header.header{
 	min-width: 262px;
   }
   &__toolbar-tab{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	padding-left: 21px;
 	cursor: pointer;
+	ul{
+	  display: none;
+	}
+	.cabinet__toolbar-header{
+	  padding-left: 21px;
+	  padding-top: 10px;
+	  padding-bottom: 10px;
+	  display: flex;
+	  width: 100%;
+	  align-items: center;
+	  text-decoration: none;
+	}
 	&.active{
-	  background-color: #235a90;
+	  position: relative;
 	  .cabinet__toolbar-header{
+		background-color: #235a90;
 		color: #fff;
 	  }
+	  .cabinet__toolbar-header-show{
+		transition: all .2s;
+		transform: rotate(-180deg);
+		background-image: url("../img/icons/arrow-white-left.png");
+		background-position: 50%;
+		right: 20px;
+		position: absolute;
+	  }
+
 	}
+  }
+  &__article{
+	display: none;
   }
   &__toolbar-header{
 	font-size: 16px;
@@ -2112,12 +2143,27 @@ header.header{
 	letter-spacing: 0.2px;
 	text-align: left;
 	color: #235a90;
+	position: relative;
+	&-show{
+	  transition: all 0.3s;
+	  background-image: url("../img/icons/arrow-right-trans.png");
+	  background-repeat: no-repeat;
+	  width: 9px;
+	  height: 12px;
+	  transform: rotate(90deg);
+	  -webkit-background-size: contain;
+	  background-size: contain;
+	  display: inline-block;
+	  position: absolute;
+	  right: 35px;
+	  height: 100%;
+	}
   }
   &__toolbar-submenu{
 	display: block;
 	padding: 0;
 	padding-top: 12px;
-	margin-left: -12px;
+	//margin-left: -12px;
 	padding-left: 12px;
 	padding-bottom: 18px;
 	background-color: #e7edf2;
@@ -2128,6 +2174,12 @@ header.header{
 	list-style-type: none;
 	padding: 0;
 	margin: 0;
+	font-size: 12px;
+	color: #3f4345;
+	&.active{
+	  color: #235a90;
+	  text-decoration: underline;
+	}
   }
   &__toolbar-submenu{
 	padding-top: 12px;
@@ -2136,6 +2188,9 @@ header.header{
 	width: 100%;
 	box-shadow: -0.6px 5px 54px 0 rgba(66, 73, 79, 0.13);
 	display: flex;
+	&-wrap{
+	  display: flex;
+	}
   }
   &__personal-info{
 	min-width: 302px;
@@ -2479,6 +2534,172 @@ header.header{
 		top: 50%;
 		transform: translateY(-50%);
 	  }
+	}
+  }
+	//cabinet prev order
+  .cabinet__prev-orders{
+	width: 100%;
+	background-color: #fff;
+	.cabinet__prev-orders-items-wrap{
+	  padding: 17px 17px 17px 1px;
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	.item{
+	  margin-left: 40px;
+	  margin-bottom: 40px;
+	  a{
+		display: block;
+		&:hover, &:active{
+		  text-decoration: none;
+		}
+	  }
+	  &.item-similar{
+		button{
+		  background-color: #ef4e4e;
+		  padding-left: 60px;
+		  &.active{
+			background-color: $green;
+		  }
+		}
+		.button-item-add:before{
+		  left: 10px;
+		}
+	  }
+	}
+	&-header{
+	  margin-left: 41px;
+	  margin-top: 21px;
+	  font-size: 24px;
+	  color: #225a90;
+	  font-weight: normal;
+	}
+	&-sort{
+	  margin-left: 41px;
+	  margin-top: 42px;
+	  font-size: 16px;
+	  line-height: 1.5;
+	  color: $green;
+	  &:hover{
+		text-decoration: none;
+	  }
+	  &:after{
+		content: "";
+		display: inline-block;
+		width: 9px;
+		height: 5px;
+		background-image: url("../img/icons/arrow-down-bold-green.png");
+		background-size: contain;
+		margin-left: 8px;
+	  }
+	}
+	.pagenav{
+	  margin-left: 41px;
+	  margin-top: 0;
+	  max-height: 100px;
+	}
+  }
+  .cabinet__support{
+	width: 100%;
+	background-color: #fff;
+	&-header{
+	  color: $accent;
+	  font-size: 24px;
+	  font-weight: normal;
+	}
+	form{
+	  display: block;
+	  max-width: 620px;
+	}
+	.button{
+	  float: right;
+	  margin-right: 8px;
+	  margin-bottom: 41px;
+	}
+	&-form-wrap{
+	  border-bottom: 1px solid #f0f3f5;
+	  margin-bottom: 19px;
+	  margin-right: 8px;
+	  margin-left: 41px;
+	}
+	&-label{
+	  width: 100%;
+	  display: flex;
+	  align-items: flex-start;
+	  margin-bottom: 40px;
+	  font-size: 14px;
+	  input, textarea{
+		width: 360px;
+		margin-left: 60px;
+		border: solid 1px #eff2f4;
+		line-height: 40px;
+	  }
+	  input{
+		height: 40px;
+		padding-left: 20px;
+		padding-right: 20px;
+	  }
+	  textarea{
+		padding-left: 20px;
+		padding-right: 20px;
+		height: 142px;
+	  }
+	}
+	.cabinet__support-label-text{
+	  margin-left: 0;
+	}
+	&-header{
+	  margin-left: 41px;
+	  margin-top: 20px;
+	  margin-bottom: 64px;
+	}
+	&-label-text{
+	  margin-left: 43px;
+	  display: inline-block;
+	  width: 150px;
+	}
+  }
+  &__my-account{
+	background-color: #fff;
+	padding: 0px 21px 21px 42px;
+	.company-info__wrap-head{
+	  color: #225a90;
+	  height: auto;
+	  font-weight: normal;
+	  margin-top: 13px;
+	  margin-bottom: 35px;
+	  font-size: 23px;
+	}
+	.company-info__about-company-label,.company-info__contacts-label,.company-info__office-label{
+	  flex-wrap: wrap;
+	}
+	.company-info__about-company-label span,.company-info__office-label span,.company-info__contacts-label span{
+	  width: 100%;
+	}
+	.company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea,
+	.company-info__contacts-label input, .company-info__contacts-label select,
+	.company-info__about-company-label input, .company-info__about-company-label select{
+	  width: 90%;
+	  background-position: 95%;
+	}
+	.cabinet__my-account-button{
+	  padding: 11px 27px;
+	  display: inline-flex;
+	  align-items: center;
+	  height: 40px;
+	  position: absolute;
+	  right: 10%;
+	  margin-top: 40px;
+	}
+	.company-info__office {
+	  padding-bottom: 100px;
+	}
+	.company-info__office-label textarea{
+	  height: 120px;
+	}
+	.company-info__wrong-text{
+	  left: 0;
+	  top: 100%;
 	}
   }
 }

@@ -93,6 +93,9 @@
 	  }
 	}
   }
+  .cabinet .cabinet__prev-orders .cabinet__prev-orders-items-wrap{
+	justify-content: space-around;
+  }
 }
 
 // ≥1024px
@@ -369,7 +372,7 @@
 	margin-bottom: 80px;
   }
   .cabinet{
-    &__main-menu{
+    &__main-menu-wrap{
       flex-wrap: wrap;
       justify-content: center;
     }
@@ -383,6 +386,20 @@
   }
   .cabinet__orders-table--row{
 	flex-wrap: wrap;
+  }
+  .cabinet__support-label{
+	flex-wrap: wrap;
+  }
+  .cabinet .cabinet__support-label input, .cabinet .cabinet__support-label textarea{
+	width: 100%;
+	margin-left: 0;
+	margin-top: 10px;
+  }
+  .cabinet .cabinet__support-label-text{
+	margin-left: 0;
+  }
+  .cabinet .cabinet__support-form-wrap{
+	margin-right: 21px;
   }
   .footer{
     padding-left: 0px;
@@ -545,6 +562,17 @@
 	.cabinet__orders-table--row{
 	  height: 156px;
 	}
+    .company-info__about-company-label input, .company-info__about-company-label select,.company-info__contacts-label input, .company-info__contacts-label select,.company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea{
+      width: 100%;
+    }
+    .company-info__about-company-label select,.company-info__contacts-label select{
+      background-position: 95%;
+    }
+    .cabinet__my-account-button{
+      left: 0;
+      right: initial;
+      margin-top: 20px;
+    }
   }
 }
 
@@ -827,7 +855,39 @@
 	  }
 	}
   }
-
+  .cabinet__order-details{
+	padding-left: 17px;
+  }
+  .cabinet .cabinet__order-products-list .cabinet__order-products-item .cabinet__order-product-name{
+	margin-left: 17px;
+  }
+  .cabinet .cabinet__prev-orders-header, .cabinet .cabinet__prev-orders-sort, .cabinet .cabinet__prev-orders .item{
+	margin-left: 17px;
+  }
+  .cabinet .cabinet__support form{
+	width: 100%;
+  }
+  .cabinet .cabinet__support-label input, .cabinet .cabinet__support-label textarea{
+	width: 100%;
+  }
+  .cabinet__support-form-wrap{
+	margin-left: 17px;
+  }
+  .cabinet .cabinet__support-header{
+	margin-left: 17px;
+  }
+  .cabinet .cabinet__support-form-wrap{
+	margin-left: 17px;
+	margin-right: 17px;
+  }
+  .cabinet__my-account{
+    padding: 17px;
+  }
+  .cabinet .cabinet__logout-btn{
+    height: 54px;
+    width: 54px;
+    z-index: 9;
+  }
   .footer{
     padding-left: 0px;
     padding-right: 0px;
@@ -888,6 +948,17 @@
         padding: 14px;
       }
     }
+	.cabinet__order-button-panel{
+	  flex-wrap: wrap;
+	  .button{
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+	  }
+	}
+	.cabinet__order-payment .cabinet__order-payment-row{
+	  margin-right: 0;
+	}
   }
   .footer-copyright .copyright{
     flex-wrap: wrap;
@@ -1094,6 +1165,36 @@
 	.cabinet__orders-table--row{
 	  font-size: 14px;
 	}
+	.cabinet__order-products-item{
+	  display: flex;
+	  flex-wrap: wrap;
+	}
+	.cabinet__order-products-table .cabinet__order-products-table-row{
+	  margin-top: 15px;
+	  align-items: flex-start;
+	  margin-bottom: 20px;
+	  border-bottom: 1px solid #ccc;
+	}
+	.cabinet__order-products-list .cabinet__order-products-item .cabinet__order-product-name{
+	  margin-left: 0;
+	  margin-top: 10px;
+	}
+	.cabinet__order-products-list .cabinet__order-products-item img {
+	  width: 80px;
+	  height: 80px;
+	  -o-object-fit: contain;
+	  object-fit: contain;
+	}
+	.cabinet__order-products-table .cabinet__order-products-table-header-row .cabinet__order-products-price, .cabinet__order-products-table .cabinet__order-products-table-row .cabinet__order-products-price{
+	  margin-right: 0;
+	}
+	.cabinet__order-products-table .cabinet__order-products-table-row .cabinet__order-products-item, .cabinet__order-products-table .cabinet__order-products-table-header-row .cabinet__order-products-item{
+	  width: 50%;
+	}
+	.cabinet__order-products-table .cabinet__order-products-table-header-row .cabinet__order-products-quantity,.cabinet__order-products-table .cabinet__order-products-table-header-row .cabinet__order-products-price,.cabinet__order-products-table .cabinet__order-products-table-row .cabinet__order-products-quantity,.cabinet__order-products-table .cabinet__order-products-table-row .cabinet__order-products-price{
+	  width: 25%;
+	}
+
   }
 
 }
