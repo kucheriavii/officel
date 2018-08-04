@@ -72,6 +72,7 @@ var setActive = function(){
     var filterHeader = '.filter .filter__header'; //при нажатии на название групп в фильре сворачывать доппараметры
     var subfilterHeader = '.filter__block .filter__category-name';
     var cabinetToolbarTab = '.cabinet__toolbar-tab';
+    var articlesToolbarTab = '.articles__toolbar-tab';
     var cabinetToolbar = '.cabinet__toolbar';
 
     //events
@@ -123,47 +124,14 @@ var setActive = function(){
             }
         }
     });
-    //табы в личном кабинете
-    $(document).on('click','.cabinet__toolbar-tab .cabinet__toolbar-header', function(e){
-        if(!$(this).parents('.cabinet__toolbar-tab').hasClass('active')){
-            $(cabinetToolbarTab).removeClass('active');
-            $(cabinetToolbarTab).children('ul').find('li').removeClass('active');
-            $(cabinetToolbarTab).children('ul').slideUp(300);
-            $(this).parents('.cabinet__toolbar-tab').addClass('active');
-            if($(this).parents('.cabinet__toolbar-tab').hasClass('active')){
-                $(this).parents('.cabinet__toolbar-tab').children('ul').slideDown(300);
-                $(this).parents('.cabinet__toolbar-tab').children('ul').find('li').eq(0).trigger('click')
-            }
-        }
-    });
-    //табы в личном кабинете
-    $(document).on('click','.cabinet__toolbar ul li', function(e){
-        $('.cabinet__toolbar ul li').removeClass('active');
-        $(this).addClass('active');
-    });
 
-    $(document).on('click', cabinetToolbarTab, function(e){
-        e.stopPropagation();
-        console.log($(e.target));
-        $('.cabinet__article').css('display','none');
-        var toolbarTab = $(this).data('toolbar-tab');
-        $('.'+toolbarTab).css('display', 'block')
-    });
-    $(document).on('click', '.cabinet__toolbar-submenu-tab', function(e){
-        e.stopPropagation();
-        $('.cabinet__article').css('display','none');
-        var toolbarTab = $(this).data('toolbar-tab');
-        console.log(toolbarTab)
-        $('.'+toolbarTab).css('display', 'block');
-    });
-    $(document).on('click','.cabinet__orders-table--detail-btn .button', function(){
-        $('.cabinet__article').css('display','none');
-        $('.cabinet__order-details').css('display','block');
-    })
-    $(document).on('click','.cabinet__order-button-back', function(){
-        $('.cabinet__article').css('display','none');
-        $('.cabinet__orders').css('display','block');
-    })
+
+    /*articles */
+    //userMethods.tabsArticles();
+    /*articles */
+    //userMethods.tabsCabinet();
+    userMethods.tabs(".cabinet");
+    userMethods.tabs(".articles");
 };
 
 var scrollToTop = function(){
@@ -438,7 +406,146 @@ var userMethods = {
         $(document).on('click', nextSlideShopsBtn, function(e){
             $(item).find('.articles-wrap').slick('slickNext');
         });
-    }
+    },
+
+    tabsArticles: function(){
+        var articlesToolbarTab = '.articles__toolbar-tab';
+        /*articles */
+        //табы в личном кабинете
+        $(document).on('click','.articles__toolbar-tab .articles__toolbar-header', function(e){
+            if(!$(this).parents('.articles__toolbar-tab').hasClass('active')){
+                $(articlesToolbarTab).removeClass('active');
+                $(articlesToolbarTab).children('ul').find('li').removeClass('active');
+                $(articlesToolbarTab).children('ul').slideUp(300);
+                $(this).parents('.articles__toolbar-tab').addClass('active');
+                if($(this).parents('.articles__toolbar-tab').hasClass('active')){
+                    $(this).parents('.articles__toolbar-tab').children('ul').slideDown(300);
+                    $(this).parents('.articles__toolbar-tab').children('ul').find('li').eq(0).trigger('click')
+                }
+            }
+        });
+        //табы в личном кабинете
+        $(document).on('click','.articles__toolbar ul li', function(e){
+            $('.articles__toolbar ul li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $(document).on('click', articlesToolbarTab, function(e){
+            $('.articles__article').css('display','none');
+            var toolbarTab = $(this).data('toolbar-tab');
+            $('.'+toolbarTab).css('display', 'block')
+        });
+        $(document).on('click', '.articles__toolbar-submenu-tab', function(e){
+            e.stopPropagation();
+            $('.articles__article').css('display','none');
+            var toolbarTab = $(this).data('toolbar-tab');
+            $('.'+toolbarTab).css('display', 'block');
+        });
+        $(document).on('click','.articles__orders-table--detail-btn .button', function(){
+            $('.articles__article').css('display','none');
+            $('.articles__order-details').css('display','block');
+        });
+        $(document).on('click','.articles__order-button-back', function(){
+           // $('.articles__article').css('display','none');
+           // $('.articles__orders').css('display','block');
+        })
+    },
+
+    tabsCabinet: function(){
+        var cabinetToolbarTab = '.cabinet__toolbar-tab';
+        //табы в личном кабинете
+        $(document).on('click','.cabinet__toolbar-tab .cabinet__toolbar-header', function(e){
+            if(!$(this).parents('.cabinet__toolbar-tab').hasClass('active')){
+                $(cabinetToolbarTab).removeClass('active');
+                $(cabinetToolbarTab).children('ul').find('li').removeClass('active');
+                $(cabinetToolbarTab).children('ul').slideUp(300);
+                $(this).parents('.cabinet__toolbar-tab').addClass('active');
+                if($(this).parents('.cabinet__toolbar-tab').hasClass('active')){
+                    $(this).parents('.cabinet__toolbar-tab').children('ul').slideDown(300);
+                    $(this).parents('.cabinet__toolbar-tab').children('ul').find('li').eq(0).trigger('click')
+                }
+            }
+        });
+        //табы в личном кабинете
+        $(document).on('click','.cabinet__toolbar ul li', function(e){
+            $('.cabinet__toolbar ul li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $(document).on('click', cabinetToolbarTab, function(e){
+            e.stopPropagation();
+            console.log($(e.target));
+            $('.cabinet__article').css('display','none');
+            var toolbarTab = $(this).data('toolbar-tab');
+            $('.'+toolbarTab).css('display', 'block')
+        });
+        $(document).on('click', '.cabinet__toolbar-submenu-tab', function(e){
+            e.stopPropagation();
+            $('.cabinet__article').css('display','none');
+            var toolbarTab = $(this).data('toolbar-tab');
+            console.log(toolbarTab)
+            $('.'+toolbarTab).css('display', 'block');
+        });
+        $(document).on('click','.cabinet__orders-table--detail-btn .button', function(){
+            $('.cabinet__article').css('display','none');
+            $('.cabinet__order-details').css('display','block');
+        })
+        $(document).on('click','.cabinet__order-button-back', function(){
+            $('.cabinet__article').css('display','none');
+            $('.cabinet__orders').css('display','block');
+        });
+    },
+
+
+    tabs: function(tabs){
+        var cabinetToolbarTab = tabs+'__toolbar-tab';
+
+        
+        //табы в личном кабинете
+        $(document).on('click',tabs+'__toolbar-tab '+tabs+'__toolbar-header', function(e){
+            if(!$(this).parents(tabs+'__toolbar-tab').hasClass('active')){
+                $(cabinetToolbarTab).removeClass('active');
+                $(cabinetToolbarTab).children('ul').find('li').removeClass('active');
+                $(cabinetToolbarTab).children('ul').slideUp(300);
+                $(this).parents(tabs+'__toolbar-tab').addClass('active');
+                if($(this).parents(tabs+'__toolbar-tab').hasClass('active')){
+                    $(this).parents(tabs+'__toolbar-tab').children('ul').slideDown(300);
+                    $(this).parents(tabs+'__toolbar-tab').children('ul').find('li').eq(0).trigger('click')
+                }
+            }
+        });
+        //табы в личном кабинете
+        $(document).on('click',tabs+'__toolbar ul li', function(e){
+            $(tabs+'__toolbar ul li').removeClass('active');
+            $(this).addClass('active');
+        });
+
+        $(document).on('click', cabinetToolbarTab, function(e){
+            e.stopPropagation();
+            console.log($(e.target));
+            $(tabs+'__article').css('display','none');
+            var toolbarTab = $(this).data('toolbar-tab');
+            $('.'+toolbarTab).css('display', 'block')
+        });
+        $(document).on('click', tabs+'__toolbar-submenu-tab', function(e){
+            e.stopPropagation();
+            $(tabs+'__article').css('display','none');
+            var toolbarTab = $(this).data('toolbar-tab');
+            console.log(toolbarTab)
+            $('.'+toolbarTab).css('display', 'block');
+        });
+        $(document).on('click',tabs+'__orders-table--detail-btn .button', function(){
+            $(tabs+'__article').css('display','none');
+            $(tabs+'__order-details').css('display','block');
+        })
+        $(document).on('click',tabs+'__order-button-back', function(){
+            $(tabs+'__article').css('display','none');
+            $(tabs+'__orders').css('display','block');
+        });
+    },
+    
+    
+    
 };
 
 
