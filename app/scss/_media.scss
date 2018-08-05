@@ -26,6 +26,22 @@
       margin-left: 80px;
     }
   }
+  .article__thumbnail{
+    margin-left: 0;
+  }
+  .articles__blog-list{
+    margin-left: 0;
+    justify-content: space-between;
+  }
+  .article__thumbnail-img{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .article__thumbnail{
+    width: 45%;
+  }
   .payment{
     right: 0;
   }
@@ -576,6 +592,13 @@
   }
   .articles__article-header{
 	margin-right: 11px;
+  }
+  .articles__article-blog{
+    padding-left: 18px;
+    padding-right: 18px;
+    .pagenav{
+      margin-right: 0;
+    }
   }
 }
 
@@ -1215,7 +1238,9 @@
 	}
 
   }
-
+  .articles__blog-wrap .articles__blog-list .article__thumbnail{
+    width: 100%;
+  }
 }
 
 

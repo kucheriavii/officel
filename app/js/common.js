@@ -74,7 +74,7 @@ var setActive = function(){
     var cabinetToolbarTab = '.cabinet__toolbar-tab';
     var articlesToolbarTab = '.articles__toolbar-tab';
     var cabinetToolbar = '.cabinet__toolbar';
-
+    var articlesBlogSort = '.articles__blog-sort';
     //events
 
     //кнопка .button-item-add
@@ -125,10 +125,9 @@ var setActive = function(){
         }
     });
 
-
-    /*articles */
-    //userMethods.tabsArticles();
-    /*articles */
+    $(document).on('click', articlesBlogSort, function(e){
+        $(this).toggleClass('active');
+    });
     //userMethods.tabsCabinet();
     userMethods.tabs(".cabinet");
     userMethods.tabs(".articles");
@@ -453,9 +452,6 @@ var userMethods = {
             $(tabs+'__orders').css('display','block');
         });
     }
-    
-    
-    
 };
 
 
