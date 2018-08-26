@@ -75,6 +75,7 @@ var setActive = function(){
     var articlesToolbarTab = '.articles__toolbar-tab';
     var cabinetToolbar = '.cabinet__toolbar';
     var articlesBlogSort = '.articles__blog-sort';
+    var cabinetPrevOrdersSort = '.cabinet__prev-orders-sort';
     //events
 
     //кнопка .button-item-add
@@ -131,6 +132,23 @@ var setActive = function(){
     //userMethods.tabsCabinet();
     userMethods.tabs(".cabinet");
     userMethods.tabs(".articles");
+
+    /*********************************/
+    $(document).on('click',cabinetPrevOrdersSort, function(e){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+        } else {
+            $(this).addClass('active');
+        }
+    })
+
+    /********************************/
+    $('.articles__article-comment-reply').on('click', function(e){
+        e.preventDefault();
+
+        $('.articles__article-reply-comment').slideToggle();
+
+    })
 };
 
 var scrollToTop = function(){
