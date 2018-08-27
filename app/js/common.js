@@ -76,6 +76,8 @@ var setActive = function(){
     var cabinetToolbar = '.cabinet__toolbar';
     var articlesBlogSort = '.articles__blog-sort';
     var cabinetPrevOrdersSort = '.cabinet__prev-orders-sort';
+
+    var deleteRowItem = '.delete-table-row'
     //events
 
     //кнопка .button-item-add
@@ -148,6 +150,10 @@ var setActive = function(){
 
         $('.articles__article-reply-comment').slideToggle();
 
+    })
+
+    $(document).on('click', deleteRowItem, function(e){
+        $(this).parents('.cabinet__orders-table--row').remove()
     })
 };
 

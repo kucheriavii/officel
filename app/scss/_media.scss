@@ -600,6 +600,26 @@
       margin-right: 0;
     }
   }
+  .cart__wrap .cabinet__orders-table--product, .cabinet__orders-table--code{
+    display: none !important;
+  }
+  .cart-panel-wrap{
+    flex-wrap: wrap;
+    .cart__buy{
+      justify-content: center;
+    }
+    .cart-panel{
+      justify-content: center;
+    }
+  }
+  .cart__wrap .cart__panel{
+    justify-content: center !important;
+    margin: 0 auto;
+  }
+  .cart__wrap .cart__buy{
+    justify-content: center !important;
+    margin-bottom: 30px;
+  }
 }
 
 // ≥768px

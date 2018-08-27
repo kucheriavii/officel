@@ -3205,6 +3205,157 @@ header.header{
 	min-height: 100%;
 	padding-bottom: 694px;
 }
+
+.cart__wrap {
+  .cabinet__orders-header {
+	font-size: 24px;
+	/* margin-bottom: 21px; */
+	/* margin-top: 21px; */
+	color: #235a90;
+	font-weight: normal;
+	padding-top: 10px;
+  }
+  .cabinet__orders-table--row{
+	justify-content: flex-start;
+	position: relative;
+	.delete-table-row{
+	  position: absolute;
+	  display: flex;
+	  top: 50%;
+	  right: 20px;
+	  transform: translateY(-50%);
+	}
+  }
+  .cabinet{
+	&__orders-table--product{
+	  width: 13%;
+	  margin-right: 30px;
+	  font-size: 14px;
+	  img{
+		display: flex;
+		min-width: 100px;
+		height: 100px;
+		-o-object-fit: scale-down;
+		object-fit: scale-down;
+		width: 100%;
+	  }
+	}
+	&__orders-table--price{
+	  width: 18%;
+	  font-size: 14px;
+	}
+  	&__orders-table--quantity{
+	  display: flex;
+	  justify-content: flex-start;
+	  width: 18%;
+	  .cabinet__orders-table--quantity-wrap{
+		width: auto;
+		display: flex;
+		align-items: center;
+	  }
+	  button{
+		display: block;
+		background-color: transparent;
+		border: none;
+		background-image: url("../img/icons/arrow-left-trans.png");
+		width: 11px;
+		height: 19px;
+		background-repeat: no-repeat;
+		background-position: center;
+		outline: none !important;
+		&.quantity-plus{
+		  background-image: url("../img/icons/arrow-right-trans.png");
+		}
+	  }
+	  input{
+		display: flex;
+		border: none;
+		background-color: transparent;
+		width: 32px;
+		justify-content: center;
+		text-align: center;
+	  }
+	}
+	&__orders-table--total{
+	  width: 19%;
+	  font-size: 14px;
+	  color: $green;
+	  padding-right: 20px;
+	}
+	&__orders-table--code{
+	  width: 15%;
+	  font-size: 14px;
+	  margin-right: 50px;
+	}
+	&__orders-table--price{
+	  width: 15%;
+	  font-size: 14px;
+	  margin-right: 30px;
+	  display: flex;
+	}
+	&__orders-table--name{
+	  width: 20%;
+	  font-size: 14px;
+	  margin-right: 30px;
+	}
+  }
+  .cabinet__orders-table--row{
+	.cabinet__orders-table--name{
+	  line-height: 1.4em;
+	}
+	.cabinet__orders-table--total{
+	  line-height: 1.4em;
+	}
+	.delete-table-row{
+	  background-image: url("../img/icons/delete.png");
+	  width: 23px;
+	  height: 22px;
+	}
+  }
+  .cart__panel{
+	display: flex;
+	padding-top: 60px;
+	padding-bottom: 60px;
+	padding-left: 21px;
+	background-color: #fff;
+	align-items: center;
+	span{
+	  margin-right: 10px;
+	  font-size: 14px;
+	}
+	input{
+	  height: 40px;
+	  display: block;
+	  width: 300px;
+	  border: 1px solid #e8ecef;
+	  padding-left: 15px;
+	  padding-right: 15px;
+	}
+  }
+  .cart-panel-wrap{
+	display: flex;
+	align-items: center;
+	background-color: #fff;
+	.cart__buy{
+	  display: flex;
+	  width: 100%;
+	  justify-content: flex-end;
+	  align-items: center;
+	  padding-right: 38px;
+	  padding-left: 20px;
+	}
+	.cart__price{
+	  font-size: 24px;
+	  color: $green;
+	  margin-right: 25px;
+	  display: block;
+	}
+	button{
+	  box-shadow: -0.6px 5px 10px 0 rgba(145, 153, 158, 0.23);
+	}
+  }
+}
+
 .footer{
   margin-top: -694px;
   min-height: 694px;
