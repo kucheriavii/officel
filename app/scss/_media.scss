@@ -112,6 +112,9 @@
   .cabinet .cabinet__prev-orders .cabinet__prev-orders-items-wrap{
 	justify-content: space-around;
   }
+  .checkout__page .checkout-product-list-row, .checkout__page .checkout-product-total{
+    width: 100%;
+  }
 }
 
 // ≥1024px
@@ -620,6 +623,17 @@
     justify-content: center !important;
     margin-bottom: 30px;
   }
+
+  .checkout__page .checkout-product-total{
+    width: 100% !important;
+    margin: 0 20px;
+  }
+  .checkout__page .checkout-product-total {
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 }
 
 // ≥768px
@@ -1059,6 +1073,39 @@
   .footer-copyright{
 	height: auto;
   }
+  .checkout__page .checkout__payment-info-popap{
+    width: 100%;
+  }
+  /**************************23/09/2018**************************************/
+  .cart__wrap .cart__panel input{
+    width: auto;
+  }
+  .cart__wrap .cart__panel {
+    -webkit-box-pack: center !important;
+    -webkit-justify-content: center !important;
+    -ms-flex-pack: center !important;
+    justify-content: center !important;
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  .cart__wrap .cart__panel span{
+    width: 100%;
+  }
+  .cart__wrap .cart__panel span {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .cart__wrap .cart-panel-wrap .cart__buy{
+    flex-wrap: wrap;
+  }
+  .cart__wrap .cart-panel-wrap .cart__price {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  /**************************end 23/09/2018**************************************/
 }
 
 // ≥420px
@@ -1261,6 +1308,34 @@
   .articles__blog-wrap .articles__blog-list .article__thumbnail{
     width: 100%;
   }
+  .checkout-product-img{
+    display: none;
+  }
+  .checkout__page .checkout__payment-info-popap{
+    width: 100%;
+  }
+
+  /*********************************23/09/18******************************************/
+  .cart__wrap .cabinet__orders-table--name,.cart__wrap .cabinet__orders-table--price{
+    font-size: 12px;
+  }
+  .cart__wrap .cabinet__orders-table--quantity input{
+    font-size: 12px;
+    width: 20px;
+  }
+  .cabinet__orders .cabinet__orders-table--header > div{
+    font-size: 12px;
+  }
+  .cart__wrap .cabinet__orders-table--total{
+    font-size: 12px;
+  }
+  .cart__wrap .cabinet__orders-table--row .delete-table-row {
+    background-image: url(../img/icons/delete.png);
+    width: 13px;
+    height: 13px;
+    background-size: 100%;
+  }
+  /**************************end 23/09/2018**************************************/
 }
 
 
