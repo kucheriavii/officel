@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /***Custom vars***/
 @font-face {
   font-family: "roboto-example";
@@ -8690,6 +8691,57 @@ header.header {
   margin-top: 40px;
 }
 
+/********купоны******/
+.cart__wrap .cart__panel {
+  min-width: 500px;
+}
+
+.bx_ordercart_coupon {
+  width: 100%;
+  margin-top: 21px;
+  position: relative;
+}
+
+.cart__panel {
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+}
+
+.basket_coupon_del_span {
+  margin-right: 10px;
+  font-size: 14px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 0;
+  left: 340px;
+}
+
+.basket_coupon_del_span:before {
+  content: "╳";
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cart__wrap .cart-panel-wrap .cart__buy {
+  position: absolute;
+  bottom: 60px;
+}
+
+.bx_ordercart_coupon_notes {
+  color: red;
+  font-size: 15px;
+  padding-left: 14px;
+}
+
 /***Custom vars***/
 /*==========  Desktop First  ==========*/
 @media (max-width: 1199.98px) {
@@ -9495,15 +9547,9 @@ header.header {
         -ms-flex-order: -1;
             order: -1;
   }
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  .cart__wrap .cart-panel-wrap .cart__buy {
+    position: static;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -9936,6 +9982,9 @@ header.header {
     -o-object-fit: cover;
     object-fit: scale-down;
   }
+  .cart__wrap .cart__panel span {
+    width: auto;
+  }
   .footer-copyright .copyright {
     -webkit-flex-wrap: wrap;
         -ms-flex-wrap: wrap;
@@ -9994,10 +10043,10 @@ header.header {
             flex-wrap: wrap;
   }
   .cart__wrap .cart__panel span {
-    width: 100%;
+    width: auto;
   }
   .cart__wrap .cart__panel span {
-    width: 100%;
+    width: auto;
     text-align: center;
     margin-bottom: 15px;
   }
@@ -10030,6 +10079,9 @@ header.header {
   }
   .popup .company-info__wrap-head, .user-info__wrap-head {
     height: auto;
+  }
+  .cart__wrap .cart__panel {
+    min-width: 100%;
   }
 }
 

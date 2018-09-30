@@ -4315,4 +4315,42 @@ header.header{
   background-color: #0f0;
   margin-top: 40px;
 }
+
+
+/********купоны******/
+.cart__wrap .cart__panel{
+  min-width: 500px;
+}
+.bx_ordercart_coupon{
+  width: 100%;
+  margin-top: 21px;
+  position: relative;
+}
+.cart__panel{
+  flex-wrap: wrap;
+}
+.basket_coupon_del_span {
+  margin-right: 10px;
+  font-size: 14px;
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 0;
+  left: 340px;
+}
+.basket_coupon_del_span:before {
+  content: "╳";
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.cart__wrap .cart-panel-wrap .cart__buy{
+  position: absolute;
+  bottom: 60px;
+}
+.bx_ordercart_coupon_notes{
+  color: red;
+  font-size: 15px;
+  padding-left: 14px;
+}
 @import "media"; // Always at the end
