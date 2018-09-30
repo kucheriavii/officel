@@ -1045,7 +1045,7 @@ header.header{
   }
 }
 //***************************************************company info
-.company-info{
+.company-info, .user-info{
   background-color: #fff;
   &__wrap{
   }
@@ -1056,14 +1056,14 @@ header.header{
 	margin-top: 22px;
 	margin-bottom: 35px;
   }
-  &__about-company{
+  &__about-company,&__about-user{
 	display: flex;
 	flex-wrap: wrap;
   }
-  &__about-company-select{
+  &__about-company-select, &__about-user-select{
 	background-color: #fff;
   }
-  &__about-company-label{
+  &__about-company-label,&__about-user-label{
 	width: 50%;
 	display: flex;
 	align-items: center;
@@ -1279,7 +1279,18 @@ header.header{
 	  margin-right: 14px;
 	}
   }
-  #agree-terms:checked+label:before,#subscribe-to-newsletters:checked+label:before{
+  #agree-terms:checked+label:before,#subscribe-to-newsletters:checked+label:before,input:checked+label:before{
+	content: "";
+	border: none;
+	display: inline-block;
+	background-image: url("../img/icons/checkbox-green.png");
+	width: 16px;
+	height: 16px;
+	margin-right: 14px;
+  }
+}
+.user-info__checkbox-wrap{
+  input:checked+label:before{
 	content: "";
 	border: none;
 	display: inline-block;
@@ -4261,5 +4272,47 @@ header.header{
 	justify-content: flex-start;
 	width: 100% !important;
   }
+}
+.popup-wrapper{
+  display: none;
+  position: fixed;
+  background-color: rgba(255,255,255,.8);
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  overflow: scroll;
+  .button{
+	display: block;
+	margin: 0 auto;
+  }
+}
+.popup-content{
+  border: solid 1px $accent;
+  background-color: #fff;
+  padding: 20px 20px;
+  position: relative;
+  .close{
+	position: absolute;
+	right: 20px;
+	top: 20px;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 40px;
+	color: $accent;
+	&:hover{
+	  text-decoration: none;
+	}
+  }
+}
+.postioned{
+  background-color: #0f0;
+  margin-top: 40px;
 }
 @import "media"; // Always at the end

@@ -66,7 +66,7 @@
     padding-left: 14px;
     padding-right: 14px;
   }
-  .company-info__about-company-label select{
+  .company-info__about-company-label select, .user-info__about-user-label select{
     background-position: 226px;
   }
   .items-catalog__wrap{
@@ -84,13 +84,19 @@
 	margin-right: 21px;
 	margin-left: 21px;
   }
-  .company-info__about-company-label input, .company-info__about-company-label select{
+  .company-info__about-company-label input, .company-info__about-company-label select,
+  .user-info__about-user-label input, .user-info__about-company-label select{
     width: 260px;
   }
-  .company-info__contacts-label input, .company-info__contacts-label select{
+  .company-info__contacts-label input, .company-info__contacts-label select,
+  .user-info__contacts-label input, .user-info__contacts-label select{
     width: 260px;
   }
-  .company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea{
+  .company-info__office-label input, .company-info__office-label select, .company-info__office-label textarea,
+  .user-info__office-label input, .user-info__office-label select, .user-info__office-label textarea{
+    width: 260px;
+  }
+  .user-info__about-user input, .user-info__additional-questions input{
     width: 260px;
   }
   .cabinet__orders-header{
@@ -114,6 +120,18 @@
   }
   .checkout__page .checkout-product-list-row, .checkout__page .checkout-product-total{
     width: 100%;
+  }
+  .checkout__page{
+    display: flex;
+    flex-direction: column;
+    .checkout-product-list-wrap{
+      order: -1;
+    }
+  }
+  .checkout__page .checkout-product-list-name{
+    font-size: 24px;
+    color: $accent;
+    padding-top: 15px;
   }
 }
 
@@ -634,6 +652,50 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+  .company-info__about-company-label, .company-info__about-user-label, .user-info__about-company-label, .user-info__about-user-label{
+    margin-right: 10px;
+    width: auto;
+  }
+  .company-info__about-company, .company-info__about-user, .user-info__about-company, .user-info__about-user {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .edit_user_data .button {
+    background-color: #a7c363;
+    border: none;
+    padding: 0;
+    margin: 0;
+    min-height: 41px;
+    line-height: 41px;
+    min-width: 41px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 9;
+    padding-left: 21px;
+    padding-right: 21px;
+    text-align: center;
+    margin: 0 auto;
+    display: block;
+    margin-top: 15px;
+  }
+  .popup-content{
+    margin: 10px;
+  }
+  .checkout__page{
+    display: flex;
+    flex-direction: column;
+    .checkout-product-list-wrap{
+      order: -1;
+    }
+  }
+  display: flex;
+  flex-direction: column;
 }
 
 // ≥768px
@@ -1106,6 +1168,23 @@
     margin-bottom: 15px;
   }
   /**************************end 23/09/2018**************************************/
+  .user-info__about-user input, .user-info__additional-questions input{
+    width: 80%;
+  }
+  .company-info__about-company-label, .company-info__about-user-label, .user-info__about-company-label, .user-info__about-user-label{
+    width: 100%;
+  }
+  .company-info__about-company-label input, .company-info__about-company-label select, .user-info__about-user-label input, .user-info__about-company-label select{
+    width: 80%;
+    background-position: 95%;
+  }
+  .popup .button{
+    display: block;
+    margin: 0 auto;
+  }
+  .popup .company-info__wrap-head, .user-info__wrap-head{
+    height: auto;
+  }
 }
 
 // ≥420px
@@ -1183,6 +1262,21 @@
   }
   .header-top .phone-link{
     font-size: 12px;
+  }
+  .company-info__about-company-label, .company-info__about-user-label, .user-info__about-company-label, .user-info__about-user-label{
+    flex-wrap: wrap;
+  }
+  .user-info__about-user input, .user-info__additional-questions input{
+    width: 100%;
+  }
+  .user-info__about-user select, .user-info__additional-questions select{
+    width: 100%;
+  }
+  .company-info__about-company-label span, .company-info__about-user-label span, .user-info__about-company-label span, .user-info__about-user-label span {
+    display: block;
+    width: 100%;
+    font-size: 14px;
+    position: static;
   }
   .sign-in-box{
 	.login__wrap{
@@ -1358,5 +1452,5 @@
 
 // ≤1200px
 @include media-breakpoint-up(xl) {
-	
+
 }

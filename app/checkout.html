@@ -383,31 +383,33 @@
 							</div>
 						</div>
 						<div class="col-xl-4">
-							<div class="checkout__page-total">
-								<h2>Total</h2>
-								<div class="checkout__total-table">
-									<div class="checkout__page-dotted-row">
-										<span class="checkout__page-total-items-count">3 items</span>
-										<span>50 Gel</span>
+							<div class="checkout__page-total-wrap">
+								<div class="checkout__page-total">
+									<h2>Total</h2>
+									<div class="checkout__total-table">
+										<div class="checkout__page-dotted-row">
+											<span class="checkout__page-total-items-count">3 items</span>
+											<span>50 Gel</span>
+										</div>
+										<div class="checkout__page-dotted-row">
+											<span class="checkout__page-total-discount">Discount</span>
+											<span>0%</span>
+										</div>
+										<div class="checkout__page-dotted-row">
+											<span class="checkout__page-total-discount">Delivery</span>
+											<span>50 Gel</span>
+										</div>
 									</div>
-									<div class="checkout__page-dotted-row">
-										<span class="checkout__page-total-discount">Discount</span>
-										<span>0%</span>
-									</div>
-									<div class="checkout__page-dotted-row">
-										<span class="checkout__page-total-discount">Delivery</span>
-										<span>50 Gel</span>
-									</div>
-								</div>
 
-								<div class="checkout__page-total-payable">
-									<span class="checkout__page-total-payable-text">Payable</span>
-									<span>122 Gel</span>
+									<div class="checkout__page-total-payable">
+										<span class="checkout__page-total-payable-text">Payable</span>
+										<span>122 Gel</span>
+									</div>
+									<div class="checkout__page-total-payable-panel">
+										<button class="button checkout__page-total-button">Confirm</button>
+									</div>
+									<a href="#" class="checkout__page-total-button-edit">Edit my order</a>
 								</div>
-								<div class="checkout__page-total-payable-panel">
-									<button class="button checkout__page-total-button">Confirm</button>
-								</div>
-								<a href="#" class="checkout__page-total-button-edit">Edit my order</a>
 							</div>
 						</div>
 
@@ -647,6 +649,48 @@
 			</ul>
 		</div>
 	</footer>
+	<div class="popup-wrapper edit_user_data">
+		<div class="popup">
+			<div class="container">
+				<div class="row">
+					<div class="col-12">
+						<div class="popup-content">
+							<div class="col-lg-12 col-sm-12 col-xs-12">
+								<div class="user-info__about-user">
+									<h2 class="user-info__wrap-head">Information about the company</h2>
+									<label class="user-info__about-company-label">
+										<span>Identification Code</span>
+										<input type="text">
+									</label>
+									<label class="user-info__about-company-label">
+										<span>Company name</span>
+										<input type="text">
+										<span class="user-info__wrong-text">text</span>
+									</label>
+									<label class="user-info__about-company-label">
+										<span>The legal form of the organization</span>
+										<select class="company-info__about-company-select">
+											<option value="Director1">Director 1</option>
+											<option value="Director2" class="selected">Director 2</option>
+											<option value="Director3">Director 3</option>
+										</select>
+									</label>
+									<div class="user-info__checkbox-wrap">
+										<input type="checkbox" id="YOUR-ID">
+										<label for="YOUR-ID" class="user-info__checkbox-label"><span>I agree with the terms and conditions *</span></label>
+									</div>
+								</div>
+								<button class="button">Proceed</button>
+
+							</div>
+							<a href="#" class="close">×</a>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/scripts.min.js"></script>
 </body>
 </html>
