@@ -11,46 +11,29 @@ $(function() {
     itemView(); //переключение вида items на странице categories
     menuFilter(); //фильтер для меню
     popup(); //попапы
+    fixedTotal();
 
-    $(window).scroll(function() {
-        if($(window).width()>=1200){
-            if($(window).scrollTop()>400){
-                $('.checkout__page-total-wrap').css({
-                    'width': '385px',
-                    'position':'fixed',
-                    'height':100+'%',
-                    'z-index':999,
-                    'top':0
-                })
-                $('.checkout__page-total').addClass('postioned');
-            }
-            if($(window).scrollTop()<400){
-                $('.checkout__page-total-wrap').css({
-                    'width': '385px',
-                    'position':'static',
-                    'height':100+'%',
-                    'z-index':999,
-                    'top':0
-                })
-                $('.checkout__page-total').removeClass('postioned');
-            }
-
-            if($(window).scrollTop()>($(document).height()-$('.footer').height()-$('.checkout__page-total-wrap').height()/2-180)){
-                $('.checkout__page-total-wrap').css({
-                    'width': '385px',
-                    'position':'static',
-                    'height':100+'%',
-                    'z-index':999,
-                    'top':0
-                })
-            }
-        }
-
-
-    });
 
 });
+var fixedTotal = function(){
+    var startPositionOfTotalBlock = $('.checkout__page-total').offset().top;
 
+    $(window).scroll(function() {
+        if($(window).width()>=1200){ //запускать только при большом екране
+            $('.checkout__page-total').css({ //стиль, чтобі не перекрівалось ничем
+                'z-index' : 99999
+            });
+            var totalVerticalPosition = $(window).scrollTop();
+            if (totalVerticalPosition>$(document).height()-$(".footer").height()-$('.checkout__page-total').height()-150)
+                totalVerticalPosition = $(document).height()-$(".footer").height()-$('.checkout__page-total').height()-210;
+            if(totalVerticalPosition<startPositionOfTotalBlock-25)
+                totalVerticalPosition = startPositionOfTotalBlock-25;
+            $('.checkout__page-total').offset({
+                top:totalVerticalPosition+25,
+            });
+        }
+    });
+};
 var sandwich = function(){ //Сендвич анимация на кнопку меню для мобильных версий
     $(".sandwich, .menu_item").click(function() {
         $(".sandwich").toggleClass("active");
