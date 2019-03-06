@@ -2763,14 +2763,6 @@ html {
   color: #666;
 }
 
-::-moz-placeholder {
-  color: #666;
-}
-
-:-ms-input-placeholder {
-  color: #666;
-}
-
 ::-ms-input-placeholder {
   color: #666;
 }
@@ -2873,14 +2865,6 @@ header.header {
 }
 
 .search__input::-webkit-input-placeholder {
-  color: #858f92;
-}
-
-.search__input::-moz-placeholder {
-  color: #858f92;
-}
-
-.search__input:-ms-input-placeholder {
   color: #858f92;
 }
 
@@ -3675,16 +3659,6 @@ header.header {
   color: #858f92;
 }
 
-.header-user__order-num::-moz-placeholder, .header-user__join-num::-moz-placeholder {
-  font-size: 12px;
-  color: #858f92;
-}
-
-.header-user__order-num:-ms-input-placeholder, .header-user__join-num:-ms-input-placeholder {
-  font-size: 12px;
-  color: #858f92;
-}
-
 .header-user__order-num::-ms-input-placeholder, .header-user__join-num::-ms-input-placeholder {
   font-size: 12px;
   color: #858f92;
@@ -3744,16 +3718,6 @@ header.header {
 }
 
 .header-user__info-new .header-user__registration-name::-webkit-input-placeholder, .header-user__info-new .header-user__registration-mail::-webkit-input-placeholder {
-  font-size: 12px;
-  color: #858f92;
-}
-
-.header-user__info-new .header-user__registration-name::-moz-placeholder, .header-user__info-new .header-user__registration-mail::-moz-placeholder {
-  font-size: 12px;
-  color: #858f92;
-}
-
-.header-user__info-new .header-user__registration-name:-ms-input-placeholder, .header-user__info-new .header-user__registration-mail:-ms-input-placeholder {
   font-size: 12px;
   color: #858f92;
 }
@@ -5220,16 +5184,6 @@ header.header {
 }
 
 .filter__list-label .filter__price-min::-webkit-input-placeholder, .filter__list-label .filter__price-max::-webkit-input-placeholder {
-  font-size: 12px;
-  color: #858f92;
-}
-
-.filter__list-label .filter__price-min::-moz-placeholder, .filter__list-label .filter__price-max::-moz-placeholder {
-  font-size: 12px;
-  color: #858f92;
-}
-
-.filter__list-label .filter__price-min:-ms-input-placeholder, .filter__list-label .filter__price-max:-ms-input-placeholder {
   font-size: 12px;
   color: #858f92;
 }
@@ -8742,6 +8696,7 @@ header.header {
   padding-left: 14px;
 }
 
+/*06.03.2019*/
 /***Custom vars***/
 /*==========  Desktop First  ==========*/
 @media (max-width: 1199.98px) {
