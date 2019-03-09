@@ -1192,6 +1192,32 @@
   .cart__wrap .cart__panel{
     min-width: 100%;
   }
+     .article__thumbnail-ltl,.article__thumbnail-bg{
+        height: auto;
+        width: 100% !important;
+    }
+    .articles__blog-list-advanced .article__thumbnail-bg{
+        display: block;
+        height: 360px;
+        width: 100%;
+        .article__thumbnail-img {
+            height: 140px;
+            overflow: hidden;
+            width: 100%;
+        }
+        .article__thumbnail-wrapper {
+            padding-right: 17px;
+            padding-left: 17px;
+            width: 100%;
+            height: auto;
+        }
+    }
+    .articles__blog-header-wrap{
+        display: block;
+        .articles__blog-header-form{
+            width: 100%;
+        }
+    }
 }
 
 // ≥420px
@@ -1437,6 +1463,7 @@
     background-size: 100%;
   }
   /**************************end 23/09/2018**************************************/
+    
 }
 
 

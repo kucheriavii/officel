@@ -12,11 +12,31 @@ $(function() {
     menuFilter(); //фильтер для меню
     popup(); //попапы
     fixedTotal();
-
+    blogListChoose();
 
 });
+var blogListChoose = function(){
+    $(".articles__blog-header-choose").text($('.articles__blog-header-form input')[0].value)
+    $(".articles__blog-header-form input").on('click', function(){
+        console.log(this.value);
+        
+        $(this).parents(".articles__blog-header-form").find(".articles__blog-header-choose").text(this.value);
+        
+        if($(this).parents(".articles__blog-header-form").find(".articles__blog-header-form-list").hasClass("active")){
+            $(this).parents(".articles__blog-header-form").find(".articles__blog-header-form-list").removeClass("active");
+            $(".articles__blog-header-choose").removeClass('choosed');
+        }
+    })
+    $(".articles__blog-header-choose").on('click', function(){
+        $(this).addClass('choosed');
+        $(this).parents(".articles__blog-header-form").find(".articles__blog-header-form-list").addClass("active")
+    })
+}
 var fixedTotal = function(){
-    var startPositionOfTotalBlock = $('.checkout__page-total').offset().top;
+    if($('.checkout__page-total').length>0){
+        
+        var startPositionOfTotalBlock = $('.checkout__page-total').offset().top;
+    }
 
     $(window).scroll(function() {
         if($(window).width()>=1200){ //запускать только при большом екране
