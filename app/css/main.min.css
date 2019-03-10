@@ -8837,6 +8837,14 @@ header.header {
   height: 380px;
 }
 
+.related-articles .item {
+  width: 100%;
+}
+
+.related-articles .related-items-slider {
+  overflow: hidden !important;
+}
+
 .related-articles .item__picture-wrap {
   width: 100%;
   height: 140px;
@@ -8849,6 +8857,26 @@ header.header {
 
 .related-articles .item__tools .item__tool {
   background-color: #0f0;
+}
+
+.related-items-slider {
+  background-color: #f1f3f5;
+  padding: 0;
+  overflow: hidden !important;
+}
+
+.related-items-slider .article__thumbnail {
+  margin-left: 10px;
+  margin-right: 10px;
+  border: none;
+}
+
+.related-items-slider .article__thumbnail:first-child {
+  margin-left: 0;
+}
+
+.related-items-slider .row {
+  background-color: #fff;
 }
 
 /***Custom vars***/
