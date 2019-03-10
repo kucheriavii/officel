@@ -1195,6 +1195,9 @@
      .article__thumbnail-ltl,.article__thumbnail-bg{
         height: auto;
         width: 100% !important;
+         .article__thumbnail-read-more{
+             margin-bottom: 17px;
+         }
     }
     .articles__blog-list-advanced .article__thumbnail-bg{
         display: block;

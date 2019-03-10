@@ -8837,6 +8837,20 @@ header.header {
   height: 380px;
 }
 
+.related-articles .item__picture-wrap {
+  width: 100%;
+  height: 140px;
+}
+
+.related-articles .item__picture-wrap img {
+  width: 100%;
+  height: 140px;
+}
+
+.related-articles .item__tools .item__tool {
+  background-color: #0f0;
+}
+
 /***Custom vars***/
 /*==========  Desktop First  ==========*/
 @media (max-width: 1199.98px) {
@@ -10181,6 +10195,9 @@ header.header {
   .article__thumbnail-ltl, .article__thumbnail-bg {
     height: auto;
     width: 100% !important;
+  }
+  .article__thumbnail-ltl .article__thumbnail-read-more, .article__thumbnail-bg .article__thumbnail-read-more {
+    margin-bottom: 17px;
   }
   .articles__blog-list-advanced .article__thumbnail-bg {
     display: block;
