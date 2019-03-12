@@ -4493,4 +4493,49 @@ header.header{
     }
 }
 
+/*New footer*/
+.footer-top{
+    background-color: #dfe7ed;
+    margin-top: 100px;
+    height: 268px;
+    .follow__header--mail:before{
+        width: 51px;
+        height: 33px;
+    }
+    .follow__header--fb:before{
+        width: 21px;
+        height: 41px;
+    }
+    .follow{
+        width: 407px;
+    }
+    .follow__input{
+        height: 42px;
+        padding-top: 0;
+        margin-top: -1px;
+    }
+    .follow__mail-subscribe{
+        height: 40px;
+    }
+    .follow__header{
+        height: 46px;
+    }
+}
+ .menu-footer__wrap{
+    margin-top: 22px;
+}
+.footer {
+    margin-top: -610px;
+    min-height: 610px;
+    position: relative;
+    padding-bottom: 48px;
+}
+.related-articles{
+    box-shadow: 0px 2px 10px #ccc;
+}
+.scroll-to-top{
+    background-color: #fff;
+    background-image: url("../img/icons/arrow-up.png");
+}
+
 @import "media"; // Always at the end

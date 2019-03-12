@@ -8879,6 +8879,62 @@ header.header {
   background-color: #fff;
 }
 
+/*New footer*/
+.footer-top {
+  background-color: #dfe7ed;
+  margin-top: 100px;
+  height: 268px;
+}
+
+.footer-top .follow__header--mail:before {
+  width: 51px;
+  height: 33px;
+}
+
+.footer-top .follow__header--fb:before {
+  width: 21px;
+  height: 41px;
+}
+
+.footer-top .follow {
+  width: 407px;
+}
+
+.footer-top .follow__input {
+  height: 42px;
+  padding-top: 0;
+  margin-top: -1px;
+}
+
+.footer-top .follow__mail-subscribe {
+  height: 40px;
+}
+
+.footer-top .follow__header {
+  height: 46px;
+}
+
+.menu-footer__wrap {
+  margin-top: 22px;
+}
+
+.footer {
+  margin-top: -610px;
+  min-height: 610px;
+  position: relative;
+  padding-bottom: 48px;
+}
+
+.related-articles {
+  -webkit-box-shadow: 0px 2px 10px #ccc;
+          box-shadow: 0px 2px 10px #ccc;
+}
+
+.scroll-to-top {
+  background-color: #fff;
+  background-image: url("../img/icons/arrow-up.png");
+}
+
 /***Custom vars***/
 /*==========  Desktop First  ==========*/
 @media (max-width: 1199.98px) {
@@ -9033,6 +9089,23 @@ header.header {
     font-size: 24px;
     color: #235a90;
     padding-top: 15px;
+  }
+  .footer-top .follow {
+    width: 100%;
+    font-size: 14px;
+  }
+  .footer-top {
+    height: auto;
+    padding-bottom: 30px;
+  }
+  .footer-top .follow__header {
+    height: auto;
+  }
+  .footer-top {
+    margin-top: 0;
+  }
+  .articles-wrap {
+    margin-left: 0 !important;
   }
 }
 

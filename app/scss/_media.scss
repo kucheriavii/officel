@@ -133,6 +133,24 @@
     color: $accent;
     padding-top: 15px;
   }
+    .footer-top .follow{
+        width: 100%;
+        font-size: 14px;
+    }
+    .footer-top{
+        height: auto;
+        padding-bottom: 30px;
+    }
+    .footer-top .follow__header{
+        height: auto;
+    }
+    .footer-top{
+        margin-top: 0;
+    }
+    .articles-wrap{
+        margin-left: 0 !important;
+    }
+    
 }
 
 // ≥1024px
