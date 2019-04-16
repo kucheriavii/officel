@@ -89,9 +89,21 @@ var sliders = function(){
         prevArrow: '<span class="slider_arrow_prev"></span>'
     });
 
+    /*
     var slidesInHeadItem = $('.header-item__slider-img').length;
 
     if (slidesInHeadItem > 6 ) slidesInHeadItem = 6;
+    $('.header-item__slider').slick({
+        infinite: false,
+        speed: 300,
+        slidesToShow: slidesInHeadItem,
+        //variableWidth: true
+    });
+    */
+    
+    var slidesInHeadItem = $('.header-item__slider-img').length;
+
+    if (slidesInHeadItem > 4 ) slidesInHeadItem = 4;
     $('.header-item__slider').slick({
         infinite: false,
         speed: 300,
