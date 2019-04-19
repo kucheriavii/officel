@@ -536,3 +536,7 @@
     height: 90px;
   }
 }
+
+.footer {
+  margin-top: -700px;
+}
