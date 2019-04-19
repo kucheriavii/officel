@@ -13,8 +13,15 @@ $(function() {
     popup(); //попапы
     fixedTotal();
     blogListChoose();
+    newItemSelect();
 
 });
+var newItemSelect = function(){
+    $(document).on('click', ".new-item .specefication .articles-header", function(){
+        $(".new-item .specefication .articles-header").removeClass("active");
+        $(this).addClass("active");
+    })
+}
 var blogListChoose = function(){
     /*$(".articles__blog-header-choose").text($('.articles__blog-header-form input')[0].value)
     $(".articles__blog-header-form input").on('click', function(){
