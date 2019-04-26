@@ -20,6 +20,18 @@ var newItemSelect = function(){
     $(document).on('click', ".new-item .specefication .articles-header", function(){
         $(".new-item .specefication .articles-header").removeClass("active");
         $(this).addClass("active");
+        var name = ($(this).data('test'));
+        $(".specefication__list").removeClass("selected");
+        console.log(name)
+        for(i=0;i<$(".specefication__list").length;i++){
+            if($(".specefication__list").eq(i).data("test") == name){
+                $(".specefication__list").eq(i).addClass("selected");
+            }
+        }
+    })
+    $(document).on('click', ".colors-wrap .color-tool", function(){
+        $(".colors-wrap .color-tool").removeClass("selected");
+        $(this).addClass("selected");
     })
 }
 var blogListChoose = function(){

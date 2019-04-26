@@ -66,6 +66,7 @@
   font-size: 48px;
   margin-bottom: 45px;
   height: 100px;
+  overflow: hidden;
 }
 
 .new-item .header-item .header-item__select-block .parameters-color .color-tool:after {
@@ -245,6 +246,15 @@
 
 .new-item .header-item .header-item__select-block {
   background-color: #fff;
+  overflow: hidden;
+}
+
+.new-item .specefication__list {
+  display: none;
+}
+
+.new-item .specefication__list.selected {
+  display: block;
 }
 
 .new-item .specefication__list li {
@@ -363,6 +373,15 @@
 
 .new-item .header-item__main-pic.purple-label:after {
   background-image: url("../img/icons/lable-purple.png");
+}
+
+.new-item .colors-wrap .color-tool.selected {
+  width: 30px !important;
+  height: 30px !important;
+  margin-left: -2px;
+  margin-right: 6px;
+  margin-top: -2px;
+  margin-bottom: 6px;
 }
 
 @media (max-width: 1199.99px) {
@@ -539,4 +558,62 @@
 
 .footer {
   margin-top: -700px;
+}
+
+.parameters-color .colors-wrap {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.parameters-color .colors-wrap .color-tool {
+  margin-bottom: 8px;
+}
+
+.new-item .header-item .header-item__slider-wrap .temp-popup {
+  position: relative;
+}
+
+.new-item .header-item .header-item__slider-wrap .temp-popup:after {
+  content: "";
+  position: absolute;
+  bottom: 17px;
+  right: 10px;
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-image: url("../img/icons/zoom.svg");
+  z-index: 99;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #fff;
+  -webkit-box-shadow: -0.6px 5px 10px 0 rgba(145, 153, 158, 0.23);
+          box-shadow: -0.6px 5px 10px 0 rgba(145, 153, 158, 0.23);
+}
+
+.header-item__slider .slick-next:before {
+  background-image: url("../img/icons/arrow-right-trans.png");
+}
+
+.header-item__slider .slick-next, .header-item__slider .slick-prev {
+  height: 35px;
+  width: 35px;
+}
+
+.header-item__slider .slick-next:before, .header-item__slider .slick-prev:before {
+  height: 35px;
+  width: 35px;
+}
+
+.header-item__slider {
+  height: 92px;
 }
